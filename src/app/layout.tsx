@@ -1,4 +1,15 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarLink,
+  NavbarToggle,
+  Footer,
+  FooterCopyright
+} from "flowbite-react";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -27,7 +38,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Navbar fluid rounded>
+          <NavbarBrand as={Link} href="https://job-search.saffles.xyz">
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Job Search Dashboard</span>
+          </NavbarBrand>
+          <NavbarToggle />
+          <NavbarCollapse>
+            <NavbarLink href="/" active>Home</NavbarLink>
+            <NavbarLink href="/daily-log" active>Daily Log</NavbarLink>
+            <NavbarLink href="/cheat-sheet">Cheat Sheet</NavbarLink>
+            <NavbarLink href="/resources">Resources</NavbarLink>
+            <NavbarLink>Logout</NavbarLink>
+          </NavbarCollapse>
+        </Navbar>
+        <main className="container mx-auto px-4">
+          {children}
+        </main>
+        <Footer container className="border-none shadow-none">
+          <FooterCopyright href="#" by="Matt Shelley" year={2025} />
+        </Footer>
       </body>
     </html>
   );

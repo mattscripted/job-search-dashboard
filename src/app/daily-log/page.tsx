@@ -1,7 +1,10 @@
 "use client";
 
-import { Button, Card, Label, Textarea } from "flowbite-react";
 import {
+  Button,
+  Card,
+  Label,
+  Textarea,
   Timeline,
   TimelineBody,
   TimelineContent,

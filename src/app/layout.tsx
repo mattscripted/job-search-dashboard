@@ -6,6 +6,11 @@ import {
   NavbarCollapse,
   NavbarLink,
   NavbarToggle,
+  Dropdown,
+  DropdownHeader,
+  DropdownItem,
+  DropdownDivider,
+  Avatar,
   Footer,
   FooterCopyright
 } from "flowbite-react";
@@ -39,19 +44,37 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar fluid rounded>
-          <NavbarBrand as={Link} href="https://job-search.saffles.xyz">
+          <NavbarBrand as={Link} href="/">
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Job Search Dashboard</span>
           </NavbarBrand>
-          <NavbarToggle />
+          <div className="flex md:order-2">
+            <Dropdown
+              arrowIcon={false}
+              inline
+              label={
+                <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+              }
+            >
+              <DropdownHeader>
+                <span className="block text-sm">Matt Shelley</span>
+                <span className="block truncate text-sm font-medium">matt.scripted@gmail.com</span>
+              </DropdownHeader>
+              <DropdownDivider />
+              <DropdownItem>Sign out</DropdownItem>
+            </Dropdown>
+
+            <NavbarToggle />
+          </div>
           <NavbarCollapse>
-            <NavbarLink href="/" active>Home</NavbarLink>
-            <NavbarLink href="/daily-log" active>Daily Log</NavbarLink>
-            <NavbarLink href="/cheat-sheet">Cheat Sheet</NavbarLink>
+            <NavbarLink href="/">Dashboard</NavbarLink>
+            <NavbarLink href="/apply">Apply</NavbarLink>
+            <NavbarLink href="/practice">Practice</NavbarLink>
+            <NavbarLink href="/interview">Interview</NavbarLink>
+            <NavbarLink href="/cheat-sheets">Cheat Sheets</NavbarLink>
             <NavbarLink href="/resources">Resources</NavbarLink>
-            <NavbarLink>Logout</NavbarLink>
           </NavbarCollapse>
         </Navbar>
-        <main className="container mx-auto px-4">
+        <main className="container mx-auto px-4 prose dark:prose-invert">
           {children}
         </main>
         <Footer container className="border-none shadow-none">

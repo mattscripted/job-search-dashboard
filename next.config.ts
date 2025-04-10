@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import createMDX from '@next/mdx';
+import rehypePrettyCode from "rehype-pretty-code";
 import withFlowbiteReact from "flowbite-react/plugin/nextjs";
 
 const nextConfig: NextConfig = {
@@ -8,7 +9,11 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
-  // Optional: you can add remark/rehype plugins if needed
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypePrettyCode]
+  },
 });
 
 export default withFlowbiteReact(withMDX(nextConfig));

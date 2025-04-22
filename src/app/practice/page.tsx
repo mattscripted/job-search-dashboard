@@ -5,11 +5,6 @@ export default function PracticePage() {
     <>
       <h1>Practice</h1>
       <FlashcardContainer />
-
-      <h2>Tips</h2>
-      <ul>
-        <li>Set a timer</li>
-      </ul>
     </>
   );
 }

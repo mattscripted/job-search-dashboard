@@ -1,26 +1,27 @@
 "use client";
 
-import { Card, Badge, ButtonGroup, Button } from "flowbite-react";
+import {
+  Card,
+  Badge,
+  ButtonGroup,
+  Button,
+} from "flowbite-react";
 
-export default function FlashCard({
+export default function Flashcard({
   id,
   title,
   href,
   description,
-  tags
+  tags,
+  onSaveResponse
 }: {
   id: string,
   title: string,
   href: string,
   description: string,
-  tags: string[]
+  tags: string[],
+  onSaveResponse: (id: string, response: string) => void
 }) {
-  const handleSaveResponse = (id: string, response: string) => {
-    const challengeResponses = JSON.parse(localStorage.getItem("challengeResponses") ?? "{}");
-    challengeResponses[id] = response;
-    localStorage.setItem("challengeResponses", JSON.stringify(challengeResponses));
-  };
-
   return (
     <Card className="mb-4">
       <a href={href} target="_blank">
@@ -33,10 +34,10 @@ export default function FlashCard({
         {tags.map((tag, index) => <Badge key={index}>{tag}</Badge>)}
       </div>
       <ButtonGroup className="shadow-none" outline>
-        <Button onClick={() => handleSaveResponse(id, 'again')}>Again</Button>
-        <Button onClick={() => handleSaveResponse(id, 'hard')}>Hard</Button>
-        <Button onClick={() => handleSaveResponse(id, 'good')}>Good</Button>
-        <Button onClick={() => handleSaveResponse(id, 'easy')}>Easy</Button>
+        <Button onClick={() => onSaveResponse(id, 'again')}>Again</Button>
+        <Button onClick={() => onSaveResponse(id, 'hard')}>Hard</Button>
+        <Button onClick={() => onSaveResponse(id, 'good')}>Good</Button>
+        <Button onClick={() => onSaveResponse(id, 'easy')}>Easy</Button>
       </ButtonGroup>
     </Card>
   );

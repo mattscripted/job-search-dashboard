@@ -1,11 +1,15 @@
-import FlashCard from "./FlashCard";
-import challenges from "./challenges.json";
+import FlashcardContainer from "./FlashcardContainer";
 
 export default function PracticePage() {
   return (
     <>
       <h1>Practice</h1>
-      {challenges.map((challenge, index) => <FlashCard key={index} {...challenge} />)}
+      <FlashcardContainer />
+
+      <h2>Tips</h2>
+      <ul>
+        <li>Set a timer</li>
+      </ul>
     </>
   );
 }

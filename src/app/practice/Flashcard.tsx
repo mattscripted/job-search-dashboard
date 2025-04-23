@@ -7,37 +7,37 @@ import {
   Button,
 } from "flowbite-react";
 
-export default function Flashcard({
-  id,
-  title,
-  href,
-  description,
-  tags,
-  onSaveResponse
-}: {
-  id: string,
+type FlashcardProps = {
+  slug: string,
   title: string,
   href: string,
-  description: string,
-  tags: string[],
+  difficulty: string,
+  tags?: string[],
   onSaveResponse: (id: string, response: string) => void
-}) {
+};
+
+export default function Flashcard({
+  slug,
+  title,
+  href,
+  difficulty,
+  tags = [],
+  onSaveResponse
+}: FlashcardProps) {
   return (
     <Card className="mb-4">
       <a href={href} target="_blank">
         <h2 className="mt-0 mb-0">{title}</h2>
       </a>
-      <p className="mt-0">
-        {description}
-      </p>
       <div className="flex flex-wrap gap-2">
+        <Badge>Difficulty: {difficulty}</Badge>
         {tags.map((tag, index) => <Badge key={index}>{tag}</Badge>)}
       </div>
       <ButtonGroup className="shadow-none" outline>
-        <Button onClick={() => onSaveResponse(id, 'again')}>Again</Button>
-        <Button onClick={() => onSaveResponse(id, 'hard')}>Hard</Button>
-        <Button onClick={() => onSaveResponse(id, 'good')}>Good</Button>
-        <Button onClick={() => onSaveResponse(id, 'easy')}>Easy</Button>
+        <Button onClick={() => onSaveResponse(slug, 'again')}>Again</Button>
+        <Button onClick={() => onSaveResponse(slug, 'hard')}>Hard</Button>
+        <Button onClick={() => onSaveResponse(slug, 'good')}>Good</Button>
+        <Button onClick={() => onSaveResponse(slug, 'easy')}>Easy</Button>
       </ButtonGroup>
     </Card>
   );

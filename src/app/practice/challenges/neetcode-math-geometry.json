@@ -1,0 +1,75 @@
+[
+  {
+    "slug": "rotate-image",
+    "title": "Rotate Image",
+    "href": "https://leetcode.com/problems/rotate-image",
+    "difficulty": "medium",
+    "topics": [
+      "math-geometry"
+    ]
+  },
+  {
+    "slug": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "href": "https://leetcode.com/problems/spiral-matrix",
+    "difficulty": "medium",
+    "topics": [
+      "math-geometry",
+      "matrix"
+    ]
+  },
+  {
+    "slug": "set-matrix-zeroes",
+    "title": "Set Matrix Zeroes",
+    "href": "https://leetcode.com/problems/set-matrix-zeroes",
+    "difficulty": "medium",
+    "topics": [
+      "math-geometry"
+    ]
+  },
+  {
+    "slug": "happy-number",
+    "title": "Happy Number",
+    "href": "https://leetcode.com/problems/happy-number",
+    "difficulty": "easy",
+    "topics": [
+      "math-geometry"
+    ]
+  },
+  {
+    "slug": "plus-one",
+    "title": "Plus One",
+    "href": "https://leetcode.com/problems/plus-one",
+    "difficulty": "easy",
+    "topics": [
+      "math-geometry"
+    ]
+  },
+  {
+    "slug": "powx-n",
+    "title": "Pow(x, n)",
+    "href": "https://leetcode.com/problems/powx-n",
+    "difficulty": "medium",
+    "topics": [
+      "math-geometry"
+    ]
+  },
+  {
+    "slug": "multiply-strings",
+    "title": "Multiply Strings",
+    "href": "https://leetcode.com/problems/multiply-strings",
+    "difficulty": "medium",
+    "topics": [
+      "math-geometry"
+    ]
+  },
+  {
+    "slug": "detect-squares",
+    "title": "Detect Squares",
+    "href": "https://leetcode.com/problems/detect-squares",
+    "difficulty": "medium",
+    "topics": [
+      "math-geometry"
+    ]
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "reverse-linked-list",
+    "title": "Reverse Linked List",
+    "href": "https://leetcode.com/problems/reverse-linked-list",
+    "difficulty": "easy",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "merge-two-sorted-lists",
+    "title": "Merge Two Sorted Lists",
+    "href": "https://leetcode.com/problems/merge-two-sorted-lists",
+    "difficulty": "easy",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "linked-list-cycle",
+    "title": "Linked List Cycle",
+    "href": "https://leetcode.com/problems/linked-list-cycle",
+    "difficulty": "easy",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "reorder-list",
+    "title": "Reorder List",
+    "href": "https://leetcode.com/problems/reorder-list",
+    "difficulty": "medium",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "remove-nth-node-from-end-of-list",
+    "title": "Remove Nth Node from End of List",
+    "href": "https://leetcode.com/problems/remove-nth-node-from-end-of-list",
+    "difficulty": "medium",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "copy-list-with-random-pointer",
+    "title": "Copy List With Random Pointer",
+    "href": "https://leetcode.com/problems/copy-list-with-random-pointer",
+    "difficulty": "medium",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "add-two-numbers",
+    "title": "Add Two Numbers",
+    "href": "https://leetcode.com/problems/add-two-numbers",
+    "difficulty": "medium",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "find-the-duplicate-number",
+    "title": "Find the Duplicate Number",
+    "href": "https://leetcode.com/problems/find-the-duplicate-number",
+    "difficulty": "medium",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "lru-cache",
+    "title": "LRU Cache",
+    "href": "https://leetcode.com/problems/lru-cache",
+    "difficulty": "medium",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "merge-k-sorted-lists",
+    "title": "Merge K Sorted Lists",
+    "href": "https://leetcode.com/problems/merge-k-sorted-lists",
+    "difficulty": "hard",
+    "topics": [
+      "linked-list"
+    ]
+  },
+  {
+    "slug": "reverse-nodes-in-k-group",
+    "title": "Reverse Nodes in K Group",
+    "href": "https://leetcode.com/problems/reverse-nodes-in-k-group",
+    "difficulty": "hard",
+    "topics": [
+      "linked-list"
+    ]
+  }
+]

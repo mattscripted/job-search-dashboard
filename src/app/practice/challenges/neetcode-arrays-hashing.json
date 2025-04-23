@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "contains-duplicate",
+    "title": "Contains Duplicate",
+    "href": "https://leetcode.com/problems/contains-duplicate",
+    "difficulty": "easy",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "href": "https://leetcode.com/problems/valid-anagram",
+    "difficulty": "easy",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "href": "https://leetcode.com/problems/two-sum",
+    "difficulty": "easy",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "group-anagrams",
+    "title": "Group Anagrams",
+    "href": "https://leetcode.com/problems/group-anagrams",
+    "difficulty": "medium",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "href": "https://leetcode.com/problems/top-k-frequent-elements",
+    "difficulty": "medium",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "encode-decode-strings",
+    "title": "Encode and Decode Strings",
+    "href": "https://leetcode.com/problems/encode-and-decode-strings",
+    "difficulty": "medium",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "product-array-except-self",
+    "title": "Product of Array Except Self",
+    "href": "https://leetcode.com/problems/product-of-array-except-self",
+    "difficulty": "medium",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "valid-sudoku",
+    "title": "Valid Sudoku",
+    "href": "https://leetcode.com/problems/valid-sudoku",
+    "difficulty": "medium",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  },
+  {
+    "slug": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence",
+    "href": "https://leetcode.com/problems/longest-consecutive-sequence",
+    "difficulty": "medium",
+    "topics": [
+      "array",
+      "hash"
+    ]
+  }
+]

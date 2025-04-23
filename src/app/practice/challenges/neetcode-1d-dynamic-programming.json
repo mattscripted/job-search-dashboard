@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "climbing-stairs",
+    "title": "Climbing Stairs",
+    "href": "https://leetcode.com/problems/climbing-stairs",
+    "difficulty": "easy",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "min-cost-climbing-stairs",
+    "title": "Min Cost Climbing Stairs",
+    "href": "https://leetcode.com/problems/min-cost-climbing-stairs",
+    "difficulty": "easy",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "house-robber",
+    "title": "House Robber",
+    "href": "https://leetcode.com/problems/house-robber",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "house-robber-ii",
+    "title": "House Robber II",
+    "href": "https://leetcode.com/problems/house-robber-ii",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "longest-palindromic-substring",
+    "title": "Longest Palindromic Substring",
+    "href": "https://leetcode.com/problems/longest-palindromic-substring",
+    "difficulty": "medium",
+    "topics": [
+      "string",
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "palindromic-substrings",
+    "title": "Palindromic Substrings",
+    "href": "https://leetcode.com/problems/palindromic-substrings",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "decode-ways",
+    "title": "Decode Ways",
+    "href": "https://leetcode.com/problems/decode-ways",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "coin-change",
+    "title": "Coin Change",
+    "href": "https://leetcode.com/problems/coin-change",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "maximum-product-subarray",
+    "title": "Maximum Product Subarray",
+    "href": "https://leetcode.com/problems/maximum-product-subarray",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "word-break",
+    "title": "Word Break",
+    "href": "https://leetcode.com/problems/word-break",
+    "difficulty": "medium",
+    "topics": [
+      "trie",
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "longest-increasing-subsequence",
+    "title": "Longest Increasing Subsequence",
+    "href": "https://leetcode.com/problems/longest-increasing-subsequence",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  },
+  {
+    "slug": "partition-equal-subset-sum",
+    "title": "Partition Equal Subset Sum",
+    "href": "https://leetcode.com/problems/partition-equal-subset-sum",
+    "difficulty": "medium",
+    "topics": [
+      "dynamic-programming",
+      "1d-dynamic-programming"
+    ]
+  }
+]

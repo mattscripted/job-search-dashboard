@@ -1,0 +1,75 @@
+[
+  {
+    "slug": "maximum-subarray",
+    "title": "Maximum Subarray",
+    "href": "https://leetcode.com/problems/maximum-subarray",
+    "difficulty": "medium",
+    "topics": [
+      "greedy",
+      "dynamic-programming"
+    ]
+  },
+  {
+    "slug": "jump-game",
+    "title": "Jump Game",
+    "href": "https://leetcode.com/problems/jump-game",
+    "difficulty": "medium",
+    "topics": [
+      "greedy"
+    ]
+  },
+  {
+    "slug": "jump-game-ii",
+    "title": "Jump Game II",
+    "href": "https://leetcode.com/problems/jump-game-ii",
+    "difficulty": "medium",
+    "topics": [
+      "greedy"
+    ]
+  },
+  {
+    "slug": "gas-station",
+    "title": "Gas Station",
+    "href": "https://leetcode.com/problems/gas-station",
+    "difficulty": "medium",
+    "topics": [
+      "greedy"
+    ]
+  },
+  {
+    "slug": "hand-of-straights",
+    "title": "Hand of Straights",
+    "href": "https://leetcode.com/problems/hand-of-straights",
+    "difficulty": "medium",
+    "topics": [
+      "greedy"
+    ]
+  },
+  {
+    "slug": "merge-triplets-to-form-target-triplet",
+    "title": "Merge Triplets to Form Target Triplet",
+    "href": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet",
+    "difficulty": "medium",
+    "topics": [
+      "greedy"
+    ]
+  },
+  {
+    "slug": "partition-labels",
+    "title": "Partition Labels",
+    "href": "https://leetcode.com/problems/partition-labels",
+    "difficulty": "medium",
+    "topics": [
+      "greedy"
+    ]
+  },
+  {
+    "slug": "valid-parenthesis-string",
+    "title": "Valid Parenthesis String",
+    "href": "https://leetcode.com/problems/valid-parenthesis-string",
+    "difficulty": "medium",
+    "topics": [
+      "greedy"
+    ]
+  }
+]

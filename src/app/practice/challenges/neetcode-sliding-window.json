@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "href": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
+    "difficulty": "easy",
+    "topics": [
+      "sliding-window"
+    ]
+  },
+  {
+    "slug": "longest-substring-without-repeating-characters",
+    "title": "Longest Substring Without Repeating Characters",
+    "href": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
+    "difficulty": "medium",
+    "topics": [
+      "sliding-window"
+    ]
+  },
+  {
+    "slug": "longest-repeating-character-replacement",
+    "title": "Longest Repeating Character Replacement",
+    "href": "https://leetcode.com/problems/longest-repeating-character-replacement",
+    "difficulty": "medium",
+    "topics": [
+      "sliding-window"
+    ]
+  },
+  {
+    "slug": "permutation-in-string",
+    "title": "Permutation in String",
+    "href": "https://leetcode.com/problems/permutation-in-string",
+    "difficulty": "medium",
+    "topics": [
+      "sliding-window"
+    ]
+  },
+  {
+    "slug": "minimum-window-substring",
+    "title": "Minimum Window Substring",
+    "href": "https://leetcode.com/problems/minimum-window-substring",
+    "difficulty": "hard",
+    "topics": [
+      "sliding-window"
+    ]
+  },
+  {
+    "slug": "sliding-window-maximum",
+    "title": "Sliding Window Maximum",
+    "href": "https://leetcode.com/problems/sliding-window-maximum",
+    "difficulty": "hard",
+    "topics": [
+      "sliding-window"
+    ]
+  }
+]

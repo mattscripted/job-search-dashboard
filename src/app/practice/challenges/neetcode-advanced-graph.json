@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "network-delay-time",
+    "title": "Network Delay Time",
+    "href": "https://leetcode.com/problems/network-delay-time",
+    "difficulty": "medium",
+    "topics": [
+      "graph",
+      "advanced-graph"
+    ]
+  },
+  {
+    "slug": "reconstruct-itinerary",
+    "title": "Reconstruct Itinerary",
+    "href": "https://leetcode.com/problems/reconstruct-itinerary",
+    "difficulty": "hard",
+    "topics": [
+      "graph",
+      "advanced-graph"
+    ]
+  },
+  {
+    "slug": "min-cost-to-connect-all-points",
+    "title": "Min Cost to Connect All Points",
+    "href": "https://leetcode.com/problems/min-cost-to-connect-all-points",
+    "difficulty": "medium",
+    "topics": [
+      "graph",
+      "advanced-graph"
+    ]
+  },
+  {
+    "slug": "swim-in-rising-water",
+    "title": "Swim in Rising Water",
+    "href": "https://leetcode.com/problems/swim-in-rising-water",
+    "difficulty": "hard",
+    "topics": [
+      "graph",
+      "advanced-graph"
+    ]
+  },
+  {
+    "slug": "alien-dictionary",
+    "title": "Alien Dictionary",
+    "href": "https://leetcode.com/problems/alien-dictionary",
+    "difficulty": "hard",
+    "topics": [
+      "graph",
+      "advanced-graph"
+    ]
+  },
+  {
+    "slug": "cheapest-flights-within-k-stops",
+    "title": "Cheapest Flights Within K Stops",
+    "href": "https://leetcode.com/problems/cheapest-flights-within-k-stops",
+    "difficulty": "medium",
+    "topics": [
+      "graph",
+      "advanced-graph"
+    ]
+  }
+]

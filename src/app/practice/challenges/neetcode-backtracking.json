@@ -1,0 +1,88 @@
+[
+  {
+    "slug": "subsets",
+    "title": "Subsets",
+    "href": "https://leetcode.com/problems/subsets",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "slug": "combination-sum",
+    "title": "Combination Sum",
+    "href": "https://leetcode.com/problems/combination-sum",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "slug": "combination-sum-ii",
+    "title": "Combination Sum II",
+    "href": "https://leetcode.com/problems/combination-sum-ii",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking"
+    ]
+  },
+  {
+    "slug": "permutations",
+    "title": "Permutations",
+    "href": "https://leetcode.com/problems/permutations",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "slug": "subsets-ii",
+    "title": "Subets II",
+    "href": "https://leetcode.com/problems/subsets-ii",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking"
+    ]
+  },
+  {
+    "slug": "word-search",
+    "title": "Word Search",
+    "href": "https://leetcode.com/problems/word-search",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking",
+      "graph"
+    ]
+  },
+  {
+    "slug": "palindrome-partitioning",
+    "title": "Palindrome Partitioning",
+    "href": "https://leetcode.com/problems/palindrome-partitioning",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking"
+    ]
+  },
+  {
+    "slug": "letter-combinations-of-a-phone-number",
+    "title": "Letter Combinations of a Phone Number",
+    "href": "https://leetcode.com/problems/letter-combinations-of-a-phone-number",
+    "difficulty": "medium",
+    "topics": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "slug": "n-queens",
+    "title": "N Queens",
+    "href": "https://leetcode.com/problems/n-queens",
+    "difficulty": "hard",
+    "topics": [
+      "backtracking"
+    ]
+  }
+]

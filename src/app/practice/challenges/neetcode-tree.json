@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "invert-binary-tree",
+    "title": "Invert Binary Tree",
+    "href": "https://leetcode.com/problems/invert-binary-tree",
+    "difficulty": "easy",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "maximum-depth-of-binary-tree",
+    "title": "Maximum Depth of Binary Tree",
+    "href": "https://leetcode.com/problems/maximum-depth-of-binary-tree",
+    "difficulty": "easy",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "diameter-of-binary-tree",
+    "title": "Diameter of Binary Tree",
+    "href": "https://leetcode.com/problems/diameter-of-binary-tree",
+    "difficulty": "easy",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "balanced-binary-tree",
+    "title": "Balanced Binary Tree",
+    "href": "https://leetcode.com/problems/balanced-binary-tree",
+    "difficulty": "easy",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "same-tree",
+    "title": "Same Tree",
+    "href": "https://leetcode.com/problems/same-tree",
+    "difficulty": "easy",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "subtree-of-another-tree",
+    "title": "Subtree of Another Tree",
+    "href": "https://leetcode.com/problems/subtree-of-another-tree",
+    "difficulty": "easy",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "href": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree",
+    "difficulty": "medium",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "binary-tree-level-order-traversal",
+    "title": "https://leetcode.com/problems/binary-tree-level-order-traversal",
+    "href": "Binary Tree Level Order Traversal",
+    "difficulty": "medium",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "binary-tree-right-side-view",
+    "title": "Binary Tree Right Side View",
+    "href": "https://leetcode.com/problems/binary-tree-right-side-view",
+    "difficulty": "medium",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "count-good-nodes-in-binary-tree",
+    "title": "Count Good Nodes in Binary Tree",
+    "href": "https://leetcode.com/problems/count-good-nodes-in-binary-tree",
+    "difficulty": "medium",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "validate-binary-search-tree",
+    "title": "Validate Binary Search Tree",
+    "href": "https://leetcode.com/problems/validate-binary-search-tree",
+    "difficulty": "medium",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "kth-smallest-element-in-a-bst",
+    "title": "Kth Smallest Element in a BST",
+    "href": "https://leetcode.com/problems/kth-smallest-element-in-a-bst",
+    "difficulty": "medium",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "href": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal",
+    "difficulty": "medium",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "binary-tree-maximum-path-sum",
+    "title": "Binary Tree Maximum Path Sum",
+    "href": "https://leetcode.com/problems/binary-tree-maximum-path-sum",
+    "difficulty": "hard",
+    "topics": [
+      "tree"
+    ]
+  },
+  {
+    "slug": "serialize-and-deserialize-binary-tree",
+    "title": "Serialize and Deserialize Binary Tree",
+    "href": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree",
+    "difficulty": "hard",
+    "topics": [
+      "tree"
+    ]
+  }
+]

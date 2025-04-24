@@ -5,8 +5,9 @@
     "href": "https://leetcode.com/problems/subsets",
     "difficulty": "medium",
     "topics": [
+      "array",
       "backtracking",
-      "recursion"
+      "bit-manipulation"
     ]
   },
   {
@@ -15,8 +16,8 @@
     "href": "https://leetcode.com/problems/combination-sum",
     "difficulty": "medium",
     "topics": [
-      "backtracking",
-      "array"
+      "array",
+      "backtracking"
     ]
   },
   {
@@ -25,6 +26,7 @@
     "href": "https://leetcode.com/problems/combination-sum-ii",
     "difficulty": "medium",
     "topics": [
+      "array",
       "backtracking"
     ]
   },
@@ -34,8 +36,8 @@
     "href": "https://leetcode.com/problems/permutations",
     "difficulty": "medium",
     "topics": [
-      "backtracking",
-      "recursion"
+      "array",
+      "backtracking"
     ]
   },
   {
@@ -44,7 +46,9 @@
     "href": "https://leetcode.com/problems/subsets-ii",
     "difficulty": "medium",
     "topics": [
-      "backtracking"
+      "array",
+      "backtracking",
+      "bit-manipulation"
     ]
   },
   {
@@ -53,8 +57,11 @@
     "href": "https://leetcode.com/problems/word-search",
     "difficulty": "medium",
     "topics": [
+      "array",
+      "string",
       "backtracking",
-      "graph"
+      "depth-first-search",
+      "matrix"
     ]
   },
   {
@@ -63,6 +70,8 @@
     "href": "https://leetcode.com/problems/palindrome-partitioning",
     "difficulty": "medium",
     "topics": [
+      "string",
+      "dynamic-programming",
       "backtracking"
     ]
   },
@@ -72,8 +81,9 @@
     "href": "https://leetcode.com/problems/letter-combinations-of-a-phone-number",
     "difficulty": "medium",
     "topics": [
-      "backtracking",
-      "recursion"
+      "hash-table",
+      "string",
+      "backtracking"
     ]
   },
   {
@@ -82,6 +92,7 @@
     "href": "https://leetcode.com/problems/n-queens",
     "difficulty": "hard",
     "topics": [
+      "array",
       "backtracking"
     ]
   }

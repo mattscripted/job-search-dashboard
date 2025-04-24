@@ -6,7 +6,8 @@
     "difficulty": "easy",
     "topics": [
       "array",
-      "hash"
+      "hash-table",
+      "sorting"
     ]
   },
   {
@@ -15,8 +16,9 @@
     "href": "https://leetcode.com/problems/valid-anagram",
     "difficulty": "easy",
     "topics": [
-      "array",
-      "hash"
+      "hash-table",
+      "string",
+      "sorting"
     ]
   },
   {
@@ -26,7 +28,7 @@
     "difficulty": "easy",
     "topics": [
       "array",
-      "hash"
+      "hash-table"
     ]
   },
   {
@@ -36,7 +38,9 @@
     "difficulty": "medium",
     "topics": [
       "array",
-      "hash"
+      "hash-table",
+      "string",
+      "sorting"
     ]
   },
   {
@@ -46,18 +50,21 @@
     "difficulty": "medium",
     "topics": [
       "array",
-      "hash"
+      "hash-table",
+      "divide-and-conquer",
+      "sorting",
+      "heap-priority-queue",
+      "bucket-sort",
+      "counting",
+      "quickselect"
     ]
   },
   {
     "slug": "encode-decode-strings",
-    "title": "Encode and Decode Strings",
+    "title": "(Premium) Encode and Decode Strings",
     "href": "https://leetcode.com/problems/encode-and-decode-strings",
     "difficulty": "medium",
-    "topics": [
-      "array",
-      "hash"
-    ]
+    "topics": []
   },
   {
     "slug": "product-array-except-self",
@@ -66,7 +73,7 @@
     "difficulty": "medium",
     "topics": [
       "array",
-      "hash"
+      "prefix-sum"
     ]
   },
   {
@@ -76,7 +83,8 @@
     "difficulty": "medium",
     "topics": [
       "array",
-      "hash"
+      "hash-table",
+      "matrix"
     ]
   },
   {
@@ -86,7 +94,8 @@
     "difficulty": "medium",
     "topics": [
       "array",
-      "hash"
+      "hash-table",
+      "union-find"
     ]
   }
 ]

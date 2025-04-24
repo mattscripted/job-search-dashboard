@@ -5,6 +5,9 @@
     "href": "https://leetcode.com/problems/implement-trie-prefix-tree",
     "difficulty": "medium",
     "topics": [
+      "hash-table",
+      "string",
+      "design",
       "trie"
     ]
   },
@@ -14,6 +17,9 @@
     "href": "https://leetcode.com/problems/design-add-and-search-words-data-structure",
     "difficulty": "medium",
     "topics": [
+      "string",
+      "depth-first-search",
+      "design",
       "trie"
     ]
   },
@@ -23,7 +29,11 @@
     "href": "https://leetcode.com/problems/word-search-ii",
     "difficulty": "hard",
     "topics": [
-      "trie"
+      "array",
+      "string",
+      "backtracking",
+      "trie",
+      "matrix"
     ]
   }
 ]

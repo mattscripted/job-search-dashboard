@@ -5,7 +5,11 @@
     "href": "https://leetcode.com/problems/number-of-islands",
     "difficulty": "medium",
     "topics": [
-      "graph"
+      "array",
+      "depth-first-search",
+      "breadth-first-search",
+      "union-find",
+      "matrix"
     ]
   },
   {
@@ -14,7 +18,11 @@
     "href": "https://leetcode.com/problems/max-area-of-island",
     "difficulty": "medium",
     "topics": [
-      "graph"
+      "array",
+      "depth-first-search",
+      "breadth-first-search",
+      "union-find",
+      "matrix"
     ]
   },
   {
@@ -23,17 +31,18 @@
     "href": "https://leetcode.com/problems/clone-graph",
     "difficulty": "medium",
     "topics": [
+      "array",
+      "depth-first-search",
+      "breadth-first-search",
       "graph"
     ]
   },
   {
     "slug": "walls-and-gates",
-    "title": "Walls and Gates",
+    "title": "(Premium) Walls and Gates",
     "href": "https://leetcode.com/problems/walls-and-gates",
     "difficulty": "medium",
-    "topics": [
-      "graph"
-    ]
+    "topics": []
   },
   {
     "slug": "rotting-oranges",
@@ -41,7 +50,9 @@
     "href": "https://leetcode.com/problems/rotting-oranges",
     "difficulty": "medium",
     "topics": [
-      "graph"
+      "array",
+      "breadth-first-search",
+      "matrix"
     ]
   },
   {
@@ -50,7 +61,10 @@
     "href": "https://leetcode.com/problems/pacific-atlantic-water-flow",
     "difficulty": "medium",
     "topics": [
-      "graph"
+      "array",
+      "depth-first-search",
+      "breadth-first-search",
+      "matrix"
     ]
   },
   {
@@ -59,7 +73,11 @@
     "href": "https://leetcode.com/problems/surrounded-regions",
     "difficulty": "medium",
     "topics": [
-      "graph"
+      "array",
+      "depth-first-search",
+      "breadth-first-search",
+      "union-find",
+      "matrix"
     ]
   },
   {
@@ -68,7 +86,10 @@
     "href": "https://leetcode.com/problems/course-schedule",
     "difficulty": "medium",
     "topics": [
-      "graph"
+      "depth-first-search",
+      "breadth-first-search",
+      "graph",
+      "topological-sort"
     ]
   },
   {
@@ -77,17 +98,18 @@
     "href": "https://leetcode.com/problems/course-schedule-ii",
     "difficulty": "medium",
     "topics": [
-      "graph"
+      "depth-first-search",
+      "breadth-first-search",
+      "graph",
+      "topological-sort"
     ]
   },
   {
     "slug": "graph-valid-tree",
-    "title": "Graph Valid Tree",
+    "title": "(Premium) Graph Valid Tree",
     "href": "https://leetcode.com/problems/graph-valid-tree",
     "difficulty": "medium",
-    "topics": [
-      "graph"
-    ]
+    "topics": []
   },
   {
     "slug": "number-of-connected-components-in-an-undirected-graph",
@@ -95,6 +117,9 @@
     "href": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph",
     "difficulty": "medium",
     "topics": [
+      "depth-first-search",
+      "breadth-first-search",
+      "union-find",
       "graph"
     ]
   },
@@ -104,6 +129,9 @@
     "href": "https://leetcode.com/problems/redundant-connection",
     "difficulty": "medium",
     "topics": [
+      "depth-first-search",
+      "breadth-first-search",
+      "union-find",
       "graph"
     ]
   },
@@ -113,7 +141,9 @@
     "href": "https://leetcode.com/problems/word-ladder",
     "difficulty": "hard",
     "topics": [
-      "graph"
+      "hash-table",
+      "string",
+      "breadth-first-search"
     ]
   }
 ]

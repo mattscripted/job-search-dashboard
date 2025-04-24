@@ -5,7 +5,8 @@
     "href": "https://leetcode.com/problems/valid-palindrome",
     "difficulty": "easy",
     "topics": [
-      "two-pointers"
+      "two-pointers",
+      "string"
     ]
   },
   {
@@ -14,7 +15,9 @@
     "href": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted",
     "difficulty": "medium",
     "topics": [
-      "two-pointers"
+      "array",
+      "two-pointers",
+      "binary-search"
     ]
   },
   {
@@ -23,7 +26,9 @@
     "href": "https://leetcode.com/problems/3sum",
     "difficulty": "medium",
     "topics": [
-      "two-pointers"
+      "array",
+      "two-pointers",
+      "sorting"
     ]
   },
   {
@@ -32,7 +37,9 @@
     "href": "https://leetcode.com/problems/container-with-most-water",
     "difficulty": "medium",
     "topics": [
-      "two-pointers"
+      "array",
+      "two-pointers",
+      "greedy"
     ]
   },
   {
@@ -41,7 +48,11 @@
     "href": "https://leetcode.com/problems/trapping-rain-water",
     "difficulty": "hard",
     "topics": [
-      "two-pointers"
+      "array",
+      "two-pointers",
+      "dynamic-programming",
+      "stack",
+      "monotonic-stack"
     ]
   }
 ]

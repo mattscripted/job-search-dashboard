@@ -5,8 +5,12 @@
     "href": "https://leetcode.com/problems/kth-largest-element-in-a-stream",
     "difficulty": "easy",
     "topics": [
-      "heap",
-      "priority-queue"
+      "tree",
+      "design",
+      "binary-search-tree",
+      "heap-priority-queue",
+      "binary-tree",
+      "data-stream"
     ]
   },
   {
@@ -15,8 +19,8 @@
     "href": "https://leetcode.com/problems/last-stone-weight",
     "difficulty": "easy",
     "topics": [
-      "heap",
-      "priority-queue"
+      "array",
+      "heap-priority-queue"
     ]
   },
   {
@@ -25,8 +29,13 @@
     "href": "https://leetcode.com/problems/k-closest-points-to-origin",
     "difficulty": "medium",
     "topics": [
-      "heap",
-      "priority-queue"
+      "array",
+      "math",
+      "divide-and-conquer",
+      "geometry",
+      "sorting",
+      "heap-priority-queue",
+      "quickselect"
     ]
   },
   {
@@ -35,8 +44,11 @@
     "href": "https://leetcode.com/problems/kth-largest-element-in-an-array",
     "difficulty": "medium",
     "topics": [
-      "heap",
-      "priority-queue"
+      "array",
+      "divide-and-conquer",
+      "sorting",
+      "heap-priority-queue",
+      "quickselect"
     ]
   },
   {
@@ -45,8 +57,12 @@
     "href": "https://leetcode.com/problems/task-scheduler",
     "difficulty": "medium",
     "topics": [
-      "heap",
-      "priority-queue"
+      "array",
+      "hash-table",
+      "greedy",
+      "sorting",
+      "heap-priority-queue",
+      "counting"
     ]
   },
   {
@@ -55,8 +71,10 @@
     "href": "https://leetcode.com/problems/design-twitter",
     "difficulty": "medium",
     "topics": [
-      "heap",
-      "priority-queue"
+      "hash-table",
+      "linked-list",
+      "design",
+      "heap-priority-queue"
     ]
   },
   {
@@ -65,8 +83,11 @@
     "href": "https://leetcode.com/problems/find-median-from-data-stream",
     "difficulty": "hard",
     "topics": [
-      "heap",
-      "priority-queue"
+      "two-pointers",
+      "design",
+      "sorting",
+      "heap-priority-queue",
+      "data-stream"
     ]
   }
 ]

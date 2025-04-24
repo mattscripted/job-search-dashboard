@@ -5,8 +5,7 @@
     "href": "https://leetcode.com/problems/insert-interval",
     "difficulty": "medium",
     "topics": [
-      "array",
-      "interval"
+      "array"
     ]
   },
   {
@@ -16,7 +15,7 @@
     "difficulty": "medium",
     "topics": [
       "array",
-      "interval"
+      "sorting"
     ]
   },
   {
@@ -25,26 +24,25 @@
     "href": "https://leetcode.com/problems/non-overlapping-intervals",
     "difficulty": "medium",
     "topics": [
-      "interval"
+      "array",
+      "dynamic-programming",
+      "greedy",
+      "sorting"
     ]
   },
   {
     "slug": "meeting-rooms",
-    "title": "Meeting Rooms",
+    "title": "(Premium) Meeting Rooms",
     "href": "https://leetcode.com/problems/meeting-rooms",
     "difficulty": "easy",
-    "topics": [
-      "interval"
-    ]
+    "topics": []
   },
   {
     "slug": "meeting-rooms-ii",
-    "title": "Meeting Rooms II",
+    "title": "(Premium) Meeting Rooms II",
     "href": "https://leetcode.com/problems/meeting-rooms-ii",
     "difficulty": "medium",
-    "topics": [
-      "interval"
-    ]
+    "topics": []
   },
   {
     "slug": "minimum-interval-to-include-each-query",
@@ -52,7 +50,11 @@
     "href": "https://leetcode.com/problems/minimum-interval-to-include-each-query",
     "difficulty": "hard",
     "topics": [
-      "interval"
+      "array",
+      "binary-search",
+      "line-sweep",
+      "sorting",
+      "heap-priority-queue"
     ]
   }
 ]

@@ -5,8 +5,9 @@
     "href": "https://leetcode.com/problems/unique-paths",
     "difficulty": "medium",
     "topics": [
+      "math",
       "dynamic-programming",
-      "2d-dynamicprogramming"
+      "combinatorics"
     ]
   },
   {
@@ -15,8 +16,8 @@
     "href": "https://leetcode.com/problems/longest-common-subsequence",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "2d-dynamicprogramming"
+      "string",
+      "dynamic-programming"
     ]
   },
   {
@@ -25,8 +26,8 @@
     "href": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "2d-dynamicprogramming"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -35,8 +36,8 @@
     "href": "https://leetcode.com/problems/coin-change-ii",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "2d-dynamicprogramming"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -45,8 +46,9 @@
     "href": "https://leetcode.com/problems/target-sum",
     "difficulty": "medium",
     "topics": [
+      "array",
       "dynamic-programming",
-      "2d-dynamicprogramming"
+      "backtracking"
     ]
   },
   {
@@ -55,8 +57,8 @@
     "href": "https://leetcode.com/problems/interleaving-string",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "2d-dynamicprogramming"
+      "string",
+      "dynamic-programming"
     ]
   },
   {
@@ -65,8 +67,14 @@
     "href": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix",
     "difficulty": "hard",
     "topics": [
+      "array",
       "dynamic-programming",
-      "2d-dynamicprogramming"
+      "depth-first-search",
+      "breadth-first-search",
+      "graph",
+      "topological-sort",
+      "memoization",
+      "matrix"
     ]
   },
   {
@@ -75,8 +83,8 @@
     "href": "https://leetcode.com/problems/distinct-subsequences",
     "difficulty": "hard",
     "topics": [
-      "dynamic-programming",
-      "2d-dynamicprogramming"
+      "string",
+      "dynamic-programming"
     ]
   },
   {
@@ -85,8 +93,8 @@
     "href": "https://leetcode.com/problems/edit-distance",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "2d-dynamicprogramming"
+      "string",
+      "dynamic-programming"
     ]
   },
   {
@@ -95,8 +103,8 @@
     "href": "https://leetcode.com/problems/burst-balloons",
     "difficulty": "hard",
     "topics": [
-      "dynamic-programming",
-      "2d-dynamicprogramming"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -105,8 +113,9 @@
     "href": "https://leetcode.com/problems/regular-expression-matching",
     "difficulty": "hard",
     "topics": [
+      "string",
       "dynamic-programming",
-      "2d-dynamicprogramming"
+      "recursion"
     ]
   }
 ]

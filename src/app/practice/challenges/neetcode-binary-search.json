@@ -5,6 +5,7 @@
     "href": "https://leetcode.com/problems/binary-search",
     "difficulty": "easy",
     "topics": [
+      "array",
       "binary-search"
     ]
   },
@@ -14,7 +15,9 @@
     "href": "https://leetcode.com/problems/search-a-2d-matrix",
     "difficulty": "medium",
     "topics": [
-      "binary-search"
+      "array",
+      "binary-search",
+      "matrix"
     ]
   },
   {
@@ -23,6 +26,7 @@
     "href": "https://leetcode.com/problems/koko-eating-bananas",
     "difficulty": "medium",
     "topics": [
+      "array",
       "binary-search"
     ]
   },
@@ -32,6 +36,7 @@
     "href": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array",
     "difficulty": "medium",
     "topics": [
+      "array",
       "binary-search"
     ]
   },
@@ -41,6 +46,7 @@
     "href": "https://leetcode.com/problems/search-in-rotated-sorted-array",
     "difficulty": "medium",
     "topics": [
+      "array",
       "binary-search"
     ]
   },
@@ -50,7 +56,10 @@
     "href": "https://leetcode.com/problems/time-based-key-value-store",
     "difficulty": "medium",
     "topics": [
-      "binary-search"
+      "hash-table",
+      "string",
+      "binary-search",
+      "design"
     ]
   },
   {
@@ -59,7 +68,9 @@
     "href": "https://leetcode.com/problems/median-of-two-sorted-arrays",
     "difficulty": "hard",
     "topics": [
-      "binary-search"
+      "array",
+      "binary-search",
+      "divide-and-conquer"
     ]
   }
 ]

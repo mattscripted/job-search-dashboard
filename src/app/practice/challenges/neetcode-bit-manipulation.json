@@ -5,6 +5,7 @@
     "href": "https://leetcode.com/problems/single-number",
     "difficulty": "easy",
     "topics": [
+      "array",
       "bit-manipulation"
     ]
   },
@@ -14,6 +15,7 @@
     "href": "https://leetcode.com/problems/number-of-1-bits",
     "difficulty": "easy",
     "topics": [
+      "divide-and-conquer",
       "bit-manipulation"
     ]
   },
@@ -23,6 +25,7 @@
     "href": "https://leetcode.com/problems/counting-bits",
     "difficulty": "easy",
     "topics": [
+      "dynamic-programming",
       "bit-manipulation"
     ]
   },
@@ -32,6 +35,7 @@
     "href": "https://leetcode.com/problems/reverse-bits",
     "difficulty": "easy",
     "topics": [
+      "divide-and-conquer",
       "bit-manipulation"
     ]
   },
@@ -41,7 +45,12 @@
     "href": "https://leetcode.com/problems/missing-number",
     "difficulty": "easy",
     "topics": [
-      "bit-manipulation"
+      "array",
+      "hash-table",
+      "math",
+      "binary-search",
+      "bit-manipulation",
+      "sorting"
     ]
   },
   {
@@ -50,6 +59,7 @@
     "href": "https://leetcode.com/problems/sum-of-two-integers",
     "difficulty": "medium",
     "topics": [
+      "math",
       "bit-manipulation"
     ]
   },
@@ -59,7 +69,7 @@
     "href": "https://leetcode.com/problems/reverse-integer",
     "difficulty": "medium",
     "topics": [
-      "bit-manipulation"
+      "math"
     ]
   }
 ]

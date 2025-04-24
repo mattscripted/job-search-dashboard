@@ -5,7 +5,10 @@
     "href": "https://leetcode.com/problems/invert-binary-tree",
     "difficulty": "easy",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -14,7 +17,10 @@
     "href": "https://leetcode.com/problems/maximum-depth-of-binary-tree",
     "difficulty": "easy",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -23,7 +29,9 @@
     "href": "https://leetcode.com/problems/diameter-of-binary-tree",
     "difficulty": "easy",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -32,7 +40,9 @@
     "href": "https://leetcode.com/problems/balanced-binary-tree",
     "difficulty": "easy",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -41,7 +51,10 @@
     "href": "https://leetcode.com/problems/same-tree",
     "difficulty": "easy",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -50,7 +63,11 @@
     "href": "https://leetcode.com/problems/subtree-of-another-tree",
     "difficulty": "easy",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "string-matching",
+      "binary-tree",
+      "hash-function"
     ]
   },
   {
@@ -59,7 +76,10 @@
     "href": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree",
     "difficulty": "medium",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
     ]
   },
   {
@@ -68,7 +88,9 @@
     "href": "Binary Tree Level Order Traversal",
     "difficulty": "medium",
     "topics": [
-      "tree"
+      "tree",
+      "breadth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -77,7 +99,10 @@
     "href": "https://leetcode.com/problems/binary-tree-right-side-view",
     "difficulty": "medium",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -86,7 +111,10 @@
     "href": "https://leetcode.com/problems/count-good-nodes-in-binary-tree",
     "difficulty": "medium",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -95,7 +123,10 @@
     "href": "https://leetcode.com/problems/validate-binary-search-tree",
     "difficulty": "medium",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
     ]
   },
   {
@@ -104,7 +135,10 @@
     "href": "https://leetcode.com/problems/kth-smallest-element-in-a-bst",
     "difficulty": "medium",
     "topics": [
-      "tree"
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
     ]
   },
   {
@@ -113,7 +147,11 @@
     "href": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal",
     "difficulty": "medium",
     "topics": [
-      "tree"
+      "array",
+      "hash-table",
+      "divide-and-conquer",
+      "tree",
+      "binary-tree"
     ]
   },
   {
@@ -122,7 +160,10 @@
     "href": "https://leetcode.com/problems/binary-tree-maximum-path-sum",
     "difficulty": "hard",
     "topics": [
-      "tree"
+      "dynamic-programming",
+      "tree",
+      "depth-first-search",
+      "binary-tree"
     ]
   },
   {
@@ -131,7 +172,12 @@
     "href": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree",
     "difficulty": "hard",
     "topics": [
-      "tree"
+      "string",
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "design",
+      "binary-tree"
     ]
   }
 ]

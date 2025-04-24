@@ -5,8 +5,11 @@
     "href": "https://leetcode.com/problems/network-delay-time",
     "difficulty": "medium",
     "topics": [
+      "depth-first-search",
+      "breadth-first-search",
       "graph",
-      "advanced-graph"
+      "heap-priority-queue",
+      "shortest-path"
     ]
   },
   {
@@ -15,8 +18,9 @@
     "href": "https://leetcode.com/problems/reconstruct-itinerary",
     "difficulty": "hard",
     "topics": [
+      "depth-first-search",
       "graph",
-      "advanced-graph"
+      "eulerian-circuit"
     ]
   },
   {
@@ -25,8 +29,10 @@
     "href": "https://leetcode.com/problems/min-cost-to-connect-all-points",
     "difficulty": "medium",
     "topics": [
+      "array",
+      "union-find",
       "graph",
-      "advanced-graph"
+      "minimum-spanning-tree"
     ]
   },
   {
@@ -35,19 +41,21 @@
     "href": "https://leetcode.com/problems/swim-in-rising-water",
     "difficulty": "hard",
     "topics": [
-      "graph",
-      "advanced-graph"
+      "array",
+      "binary-search",
+      "depth-first-search",
+      "breadth-first-search",
+      "union-find",
+      "heap-priority-queue",
+      "matrix"
     ]
   },
   {
     "slug": "alien-dictionary",
-    "title": "Alien Dictionary",
+    "title": "(Premium) Alien Dictionary",
     "href": "https://leetcode.com/problems/alien-dictionary",
     "difficulty": "hard",
-    "topics": [
-      "graph",
-      "advanced-graph"
-    ]
+    "topics": []
   },
   {
     "slug": "cheapest-flights-within-k-stops",
@@ -55,8 +63,12 @@
     "href": "https://leetcode.com/problems/cheapest-flights-within-k-stops",
     "difficulty": "medium",
     "topics": [
+      "dynamic-programming",
+      "depth-first-search",
+      "breadth-first-search",
       "graph",
-      "advanced-graph"
+      "heap-priority-queue",
+      "shortest-path"
     ]
   }
 ]

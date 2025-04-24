@@ -5,7 +5,8 @@
     "href": "https://leetcode.com/problems/reverse-linked-list",
     "difficulty": "easy",
     "topics": [
-      "linked-list"
+      "linked-list",
+      "recursion"
     ]
   },
   {
@@ -14,7 +15,8 @@
     "href": "https://leetcode.com/problems/merge-two-sorted-lists",
     "difficulty": "easy",
     "topics": [
-      "linked-list"
+      "linked-list",
+      "recursion"
     ]
   },
   {
@@ -23,7 +25,9 @@
     "href": "https://leetcode.com/problems/linked-list-cycle",
     "difficulty": "easy",
     "topics": [
-      "linked-list"
+      "hash-table",
+      "linked-list",
+      "two-pointers"
     ]
   },
   {
@@ -32,7 +36,10 @@
     "href": "https://leetcode.com/problems/reorder-list",
     "difficulty": "medium",
     "topics": [
-      "linked-list"
+      "linked-list",
+      "two-pointers",
+      "stack",
+      "recursion"
     ]
   },
   {
@@ -41,7 +48,8 @@
     "href": "https://leetcode.com/problems/remove-nth-node-from-end-of-list",
     "difficulty": "medium",
     "topics": [
-      "linked-list"
+      "linked-list",
+      "two-pointers"
     ]
   },
   {
@@ -50,6 +58,7 @@
     "href": "https://leetcode.com/problems/copy-list-with-random-pointer",
     "difficulty": "medium",
     "topics": [
+      "hash-table",
       "linked-list"
     ]
   },
@@ -59,7 +68,9 @@
     "href": "https://leetcode.com/problems/add-two-numbers",
     "difficulty": "medium",
     "topics": [
-      "linked-list"
+      "linked-list",
+      "math",
+      "recursion"
     ]
   },
   {
@@ -68,7 +79,10 @@
     "href": "https://leetcode.com/problems/find-the-duplicate-number",
     "difficulty": "medium",
     "topics": [
-      "linked-list"
+      "array",
+      "two-pointers",
+      "binary-search",
+      "bit-manipulation"
     ]
   },
   {
@@ -77,7 +91,10 @@
     "href": "https://leetcode.com/problems/lru-cache",
     "difficulty": "medium",
     "topics": [
-      "linked-list"
+      "hash-table",
+      "linked-list",
+      "design",
+      "doubly-linked-list"
     ]
   },
   {
@@ -86,7 +103,10 @@
     "href": "https://leetcode.com/problems/merge-k-sorted-lists",
     "difficulty": "hard",
     "topics": [
-      "linked-list"
+      "linked-list",
+      "divide-and-conquer",
+      "heap-priority-queue",
+      "merge-sort"
     ]
   },
   {
@@ -95,7 +115,8 @@
     "href": "https://leetcode.com/problems/reverse-nodes-in-k-group",
     "difficulty": "hard",
     "topics": [
-      "linked-list"
+      "linked-list",
+      "recursion"
     ]
   }
 ]

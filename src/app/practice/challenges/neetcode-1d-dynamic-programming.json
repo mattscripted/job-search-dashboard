@@ -5,8 +5,9 @@
     "href": "https://leetcode.com/problems/climbing-stairs",
     "difficulty": "easy",
     "topics": [
+      "math",
       "dynamic-programming",
-      "1d-dynamic-programming"
+      "memoization"
     ]
   },
   {
@@ -15,8 +16,8 @@
     "href": "https://leetcode.com/problems/min-cost-climbing-stairs",
     "difficulty": "easy",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -25,8 +26,8 @@
     "href": "https://leetcode.com/problems/house-robber",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -35,8 +36,8 @@
     "href": "https://leetcode.com/problems/house-robber-ii",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -45,9 +46,9 @@
     "href": "https://leetcode.com/problems/longest-palindromic-substring",
     "difficulty": "medium",
     "topics": [
+      "two-pointers",
       "string",
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "dynamic-programming"
     ]
   },
   {
@@ -56,8 +57,9 @@
     "href": "https://leetcode.com/problems/palindromic-substrings",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "two-pointers",
+      "string",
+      "dynamic-programming"
     ]
   },
   {
@@ -66,8 +68,8 @@
     "href": "https://leetcode.com/problems/decode-ways",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "string",
+      "dynamic-programming"
     ]
   },
   {
@@ -76,8 +78,9 @@
     "href": "https://leetcode.com/problems/coin-change",
     "difficulty": "medium",
     "topics": [
+      "array",
       "dynamic-programming",
-      "1d-dynamic-programming"
+      "breadth-first-search"
     ]
   },
   {
@@ -86,8 +89,8 @@
     "href": "https://leetcode.com/problems/maximum-product-subarray",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -96,9 +99,12 @@
     "href": "https://leetcode.com/problems/word-break",
     "difficulty": "medium",
     "topics": [
-      "trie",
+      "array",
+      "hash-table",
+      "string",
       "dynamic-programming",
-      "1d-dynamic-programming"
+      "trie",
+      "memoization"
     ]
   },
   {
@@ -107,8 +113,9 @@
     "href": "https://leetcode.com/problems/longest-increasing-subsequence",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "array",
+      "binary-search",
+      "dynamic-programming"
     ]
   },
   {
@@ -117,8 +124,8 @@
     "href": "https://leetcode.com/problems/partition-equal-subset-sum",
     "difficulty": "medium",
     "topics": [
-      "dynamic-programming",
-      "1d-dynamic-programming"
+      "array",
+      "dynamic-programming"
     ]
   }
 ]

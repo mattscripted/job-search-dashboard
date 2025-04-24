@@ -5,7 +5,8 @@
     "href": "https://leetcode.com/problems/maximum-subarray",
     "difficulty": "medium",
     "topics": [
-      "greedy",
+      "array",
+      "divide-and-conquer",
       "dynamic-programming"
     ]
   },
@@ -15,6 +16,8 @@
     "href": "https://leetcode.com/problems/jump-game",
     "difficulty": "medium",
     "topics": [
+      "array",
+      "dynamic-programming",
       "greedy"
     ]
   },
@@ -24,6 +27,8 @@
     "href": "https://leetcode.com/problems/jump-game-ii",
     "difficulty": "medium",
     "topics": [
+      "array",
+      "dynamic-programming",
       "greedy"
     ]
   },
@@ -33,6 +38,7 @@
     "href": "https://leetcode.com/problems/gas-station",
     "difficulty": "medium",
     "topics": [
+      "array",
       "greedy"
     ]
   },
@@ -42,7 +48,10 @@
     "href": "https://leetcode.com/problems/hand-of-straights",
     "difficulty": "medium",
     "topics": [
-      "greedy"
+      "array",
+      "hash-table",
+      "greedy",
+      "sorting"
     ]
   },
   {
@@ -51,6 +60,7 @@
     "href": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet",
     "difficulty": "medium",
     "topics": [
+      "array",
       "greedy"
     ]
   },
@@ -60,6 +70,9 @@
     "href": "https://leetcode.com/problems/partition-labels",
     "difficulty": "medium",
     "topics": [
+      "hash-table",
+      "two-pointers",
+      "string",
       "greedy"
     ]
   },
@@ -69,6 +82,9 @@
     "href": "https://leetcode.com/problems/valid-parenthesis-string",
     "difficulty": "medium",
     "topics": [
+      "string",
+      "dynamic-programming",
+      "stack",
       "greedy"
     ]
   }

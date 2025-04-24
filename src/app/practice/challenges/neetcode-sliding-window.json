@@ -5,7 +5,8 @@
     "href": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
     "difficulty": "easy",
     "topics": [
-      "sliding-window"
+      "array",
+      "dynamic-programming"
     ]
   },
   {
@@ -14,6 +15,8 @@
     "href": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
     "difficulty": "medium",
     "topics": [
+      "hash-table",
+      "string",
       "sliding-window"
     ]
   },
@@ -23,6 +26,8 @@
     "href": "https://leetcode.com/problems/longest-repeating-character-replacement",
     "difficulty": "medium",
     "topics": [
+      "hash-table",
+      "string",
       "sliding-window"
     ]
   },
@@ -32,6 +37,9 @@
     "href": "https://leetcode.com/problems/permutation-in-string",
     "difficulty": "medium",
     "topics": [
+      "hash-table",
+      "two-pointers",
+      "string",
       "sliding-window"
     ]
   },
@@ -41,6 +49,8 @@
     "href": "https://leetcode.com/problems/minimum-window-substring",
     "difficulty": "hard",
     "topics": [
+      "hash-table",
+      "string",
       "sliding-window"
     ]
   },
@@ -50,7 +60,11 @@
     "href": "https://leetcode.com/problems/sliding-window-maximum",
     "difficulty": "hard",
     "topics": [
-      "sliding-window"
+      "array",
+      "queue",
+      "sliding-window",
+      "heap-priority-queue",
+      "monotonic-queue"
     ]
   }
 ]

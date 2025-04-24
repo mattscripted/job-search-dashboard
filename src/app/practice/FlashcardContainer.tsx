@@ -4,14 +4,15 @@ import { useEffect, useState } from "react";
 import Flashcard from "./Flashcard";
 import challenges from "./challenges";
 import ToastProvider, { useToast } from "@/components/ToastProvider";
+import { Problem } from "@/types/problem";
 
 function FlashcardContainer() {
   const { setToast } = useToast();
-  const [randomChallengeId, setRandomChallengeId] = useState<number | undefined>(undefined);
+  const [challengeId, setChallengeId] = useState<number | undefined>(undefined);
 
   // Determine which question to show
   useEffect(() => {
-    setRandomChallengeId(Math.floor(Math.random() * challenges.length));
+    setChallengeId(Math.floor(Math.random() * challenges.length));
   }, [])
 
   const handleSaveResponse = (slug: string, response: string) => {
@@ -26,8 +27,8 @@ function FlashcardContainer() {
   return (
     <>
       <h2>Random Challenge</h2>
-      {randomChallengeId ? (
-        <Flashcard {...challenges[randomChallengeId]} onSaveResponse={handleSaveResponse} />
+      {challengeId ? (
+        <Flashcard problem={challenges[challengeId] as Problem} onSaveResponse={handleSaveResponse} />
       ) : null}
     </>
   );

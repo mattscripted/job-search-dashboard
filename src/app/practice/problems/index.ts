@@ -1,5 +1,5 @@
 /**
- * NeetCode questions from https://neetcode.io/roadmap
+ * NeetCode problem from https://neetcode.io/roadmap
  */
 import neetcodeArraysHashing from "./neetcode-arrays-hashing.json";
 import neetcodeTwoPointers from "./neetcode-two-pointers.json";
@@ -31,7 +31,7 @@ import grind75Misc from "./grind75-misc.json";
  * https://leetcode.com/problem-list/oizxjoit/
  */
 
-const challenges = [
+const problems = [
   ...neetcodeArraysHashing,
   ...neetcodeTwoPointers,
   ...neetcodeStack,
@@ -53,4 +53,4 @@ const challenges = [
   ...grind75Misc,
 ];
 
-export default challenges;
+export default problems;

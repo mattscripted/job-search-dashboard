@@ -2,33 +2,34 @@
 
 import { useEffect, useState } from "react";
 import Flashcard from "./Flashcard";
-import challenges from "./challenges";
+import problems from "./problems";
 import ToastProvider, { useToast } from "@/components/ToastProvider";
 import { Problem } from "@/types/problem";
 
 function FlashcardContainer() {
   const { setToast } = useToast();
-  const [challengeId, setChallengeId] = useState<number | undefined>(undefined);
+  const [problemId, setProblemId] = useState<number | undefined>(undefined);
 
-  // Determine which question to show
+  // Determine which problem to show on page load,
+  // so we don't break server-side rendering
   useEffect(() => {
-    setChallengeId(Math.floor(Math.random() * challenges.length));
+    setProblemId(Math.floor(Math.random() * problems.length));
   }, [])
 
   const handleSaveResponse = (slug: string, response: string) => {
     // Update local storage with response
-    const challengeResponses = JSON.parse(localStorage.getItem("challengeResponses") ?? "{}");
-    challengeResponses[slug] = response;
-    localStorage.setItem("challengeResponses", JSON.stringify(challengeResponses));
+    const problemResponses = JSON.parse(localStorage.getItem("problemResponses") ?? "{}");
+    problemResponses[slug] = response;
+    localStorage.setItem("problemResponses", JSON.stringify(problemResponses));
 
     setToast({ message: "Successfully updated progress." });
   };
 
   return (
     <>
-      <h2>Random Challenge</h2>
-      {challengeId ? (
-        <Flashcard problem={challenges[challengeId] as Problem} onSaveResponse={handleSaveResponse} />
+      <h2>Random Problem</h2>
+      {problemId ? (
+        <Flashcard problem={problems[problemId] as Problem} onSaveResponse={handleSaveResponse} />
       ) : null}
     </>
   );

@@ -6,11 +6,6 @@ import {
   NavbarCollapse,
   NavbarLink,
   NavbarToggle,
-  Dropdown,
-  DropdownHeader,
-  DropdownItem,
-  DropdownDivider,
-  Avatar,
   Footer,
   FooterCopyright
 } from "flowbite-react";
@@ -47,31 +42,9 @@ export default function RootLayout({
           <NavbarBrand as={Link} href="/">
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Job Search Dashboard</span>
           </NavbarBrand>
-          <div className="flex md:order-2">
-            <Dropdown
-              arrowIcon={false}
-              inline
-              label={
-                <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
-              }
-            >
-              <DropdownHeader>
-                <span className="block text-sm">Matt Shelley</span>
-                <span className="block truncate text-sm font-medium">matt.scripted@gmail.com</span>
-              </DropdownHeader>
-              <DropdownDivider />
-              <DropdownItem>Sign out</DropdownItem>
-            </Dropdown>
-
-            <NavbarToggle />
-          </div>
+          <NavbarToggle />
           <NavbarCollapse>
-            <NavbarLink href="/">Dashboard</NavbarLink>
-            <NavbarLink href="/apply">Apply</NavbarLink>
-            <NavbarLink href="/practice">Practice</NavbarLink>
-            <NavbarLink href="/interview">Interview</NavbarLink>
-            <NavbarLink href="/cheat-sheets">Cheat Sheets</NavbarLink>
-            <NavbarLink href="/resources">Resources</NavbarLink>
+            <NavbarLink href="/behavioural-interviews">Behavioural Interviews</NavbarLink>
           </NavbarCollapse>
         </Navbar>
         <main className="container mx-auto px-4 prose dark:prose-invert">

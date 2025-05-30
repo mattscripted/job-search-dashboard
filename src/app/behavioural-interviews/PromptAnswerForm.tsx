@@ -2,7 +2,6 @@
 
 import {
   Label,
-  TextInput,
   Textarea,
 } from "flowbite-react";
 import { PromptAnswer } from "@/types/prompt-answer";

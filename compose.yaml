@@ -1,0 +1,32 @@
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    env_file:
+      - .env.local
+    volumes:
+      - mongodb-volume:/data/db
+    ports:
+      - 27017:27017
+
+  next-app:
+    build:
+      context: .
+    env_file:
+      - .env.local
+    volumes:
+      - ./.flowbite-react/:/app/.flowbite-react
+      - ./public:/app/public
+      - ./src:/app/src
+      - ./mdx-components.tsx:/app/mdx-components.tsx
+      - ./next.config.ts:/app/next.config.ts
+      - ./postcss.config.mjs:/app/postcss.config.mjs
+      - ./tsconfig.json:/app/tsconfig.json
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongodb
+
+volumes:
+  mongodb-volume:

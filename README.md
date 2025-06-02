@@ -42,6 +42,12 @@ Set up local environment for GitHub app:
 3. Create a client secret (and maybe a private key)
 4. Store client id (`AUTH_GITHUB_ID`) and client secret (`AUTH_GITHUB_SECRET`) in `.env.local`
 
+### Connect to MongoDB Locally
+
+```
+mongodb://root:password@localhost:27017/
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

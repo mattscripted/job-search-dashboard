@@ -9,6 +9,7 @@ import {
   Footer,
   FooterCopyright
 } from "flowbite-react";
+import { auth } from "@/auth";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -28,11 +29,13 @@ export const metadata: Metadata = {
   description: "Get help finding your next job as a software developer",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
+
   return (
     <html lang="en">
       <body
@@ -45,9 +48,17 @@ export default function RootLayout({
           <NavbarToggle />
           <NavbarCollapse>
             <NavbarLink href="/behavioural-interviews">Behavioural Interviews</NavbarLink>
+            {session === null ? (
+              <NavbarLink href="/auth/signin">Sign in</NavbarLink>
+            ) : (
+              <NavbarLink href="/auth/signout">Sign out</NavbarLink>
+            )}
           </NavbarCollapse>
         </Navbar>
         <main className="container mx-auto px-4 prose dark:prose-invert">
+          <pre className="whitespace-pre-wrap break-all px-4 py-6">
+            {JSON.stringify(session, null, 2)}
+          </pre>
           {children}
         </main>
         <Footer container className="border-none shadow-none">

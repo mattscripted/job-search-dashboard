@@ -20,6 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+### Setup GitHub for Authentication
+
+Create a copy of local environment variables:
+```sh
+cp .env.local.example .env.local
+```
+
+Define `AUTH_SECRET` environment variable:
+```sh
+npx auth secret
+```
+
+Set up local environment for GitHub app:
+1. Go to https://github.com/settings/apps
+2. Create a new app
+  - **GitHub App name:** Job Search Dashboard (local)
+  - **Homepage URL:** http://localhost:3000/
+  - **Callback URL:** http://localhost:3000/auth/callback/github
+  - No webhook
+3. Create a client secret (and maybe a private key)
+4. Store client id (`AUTH_GITHUB_ID`) and client secret (`AUTH_GITHUB_SECRET`) in `.env.local`
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

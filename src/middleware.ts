@@ -5,6 +5,7 @@ const INVITE_COOKIE_NAME = "inviteKey";
 const { SECRET_INVITE_KEY } = process.env;
 
 export function middleware(request: NextRequest) {
+  console.log("MS: Next.js middleware", request);
   // Exclude permission check on development environment
   if (process.env.NODE_ENV === "development") {
     return NextResponse.next();

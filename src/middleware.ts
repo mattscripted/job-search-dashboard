@@ -1,59 +1,40 @@
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 
-const INVITE_COOKIE_NAME = "inviteKey";
+const INVITE_QUERY_PARAM = "invite";
+const INVITE_COOKIE_NAME = "invite";
 const { SECRET_INVITE_KEY } = process.env;
 
-export function middleware(request: NextRequest) {
-  console.log("MS: Next.js middleware", request);
-  // Exclude permission check on development environment
-  if (process.env.NODE_ENV === "development") {
-    return NextResponse.next();
-  }
+function trackInvite(request: NextRequest) {
+  const { searchParams } = request.nextUrl;
+  const invite = searchParams.get(INVITE_QUERY_PARAM);
 
-  const { pathname, searchParams } = request.nextUrl;
-
-  /**
-   * Check if you have permission to view the site:
-   * - ?inviteKey=<SECRET_INVITE_KEY> in the URL
-   * - inviteKey cookie has <SECRET_INVITE_KEY> as its value
-   */
-
-  /**
-   * Check query params:
-   * - If it exists with the right invite key, store the value in a cookie
-   * - Then, move onto the requested page
-   */
-  if (searchParams.get(INVITE_COOKIE_NAME) === SECRET_INVITE_KEY) {
+  if (invite) {
     const response = NextResponse.next();
-    response.cookies.set(INVITE_COOKIE_NAME, SECRET_INVITE_KEY);
+    response.cookies.set(INVITE_COOKIE_NAME, invite);
     return response;
-  }
-
-  /**
-   * Check invite cookie:
-   * - If it exists with the right value, then move onto the request page
-   */
-  if (request.cookies.get(INVITE_COOKIE_NAME)?.value === SECRET_INVITE_KEY) {
-    return NextResponse.next();
-  }
-
-  /**
-   * Forbidden:
-   * - Redirect to the /forbidden route
-   * - Ignore redirecting infinitely if you are already on the /forbidden route
-   */
-  if (!pathname.startsWith("/forbidden")) {
-    return NextResponse.redirect(new URL("/forbidden", request.url));
-  } else {
-    return NextResponse.next();
   }
 }
 
-/**
- * Only apply middleware to /auth routes, so you can't log in
- * Copied from: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
- */
-export const config = {
-  matcher: ['/auth/:path*'],
+// This check only runs on production
+function preventUninvitedAuth(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (
+    true //process.env.NODE_ENV === "production"
+    && pathname.startsWith("/auth")
+    && request.cookies.get(INVITE_COOKIE_NAME)?.value !== SECRET_INVITE_KEY!
+  ) {
+    return NextResponse.redirect(new URL("/forbidden", request.url));
+  }
+}
+
+export function middleware(request: NextRequest) {
+  let response = trackInvite(request);
+  if (response) return response;
+
+  response = preventUninvitedAuth(request);
+  if (response) return response;
+
+  return NextResponse.next();
 }

@@ -51,9 +51,9 @@ export function middleware(request: NextRequest) {
 }
 
 /**
- * Only apply middleware to routes.
+ * Only apply middleware to /auth routes, so you can't log in
  * Copied from: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
  */
 export const config = {
-  matcher: ['/behavioural-interviews', '/404'],
+  matcher: ['/auth/:path*'],
 }

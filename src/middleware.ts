@@ -21,7 +21,7 @@ function preventUninvitedAuth(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (
-    true //process.env.NODE_ENV === "production"
+    process.env.NODE_ENV === "production"
     && pathname.startsWith("/auth")
     && request.cookies.get(INVITE_COOKIE_NAME)?.value !== SECRET_INVITE_KEY!
   ) {

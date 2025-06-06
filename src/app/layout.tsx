@@ -9,7 +9,7 @@ import {
   Footer,
   FooterCopyright
 } from "flowbite-react";
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";

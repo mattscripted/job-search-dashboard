@@ -1,3 +1,10 @@
+/**
+ * From my research, it appears NextAuth curently only supports mongodb client instead of mongoose.
+ * The recommended workaround is to use two connections: one for MongoDB, and another for Mongoose.
+ * So, this connection should only be used by auth.
+ * https://github.com/nextauthjs/next-auth/discussions/5004
+ */
+
 // https://authjs.dev/getting-started/adapters/mongodb
 // This approach is taken from https://github.com/vercel/next.js/tree/canary/examples/with-mongodb
 import { MongoClient, ServerApiVersion } from "mongodb"

@@ -22,7 +22,7 @@ export default function BehaviouralInterviewsPage(props: { json: string; meta: a
 
   return (
     <>
-      <h1>Hello from behavioural-interviews</h1>
+      <h1>Behavioural Interviews</h1>
       <ul>
         {topics.map((topic, index) => (
           <li key={index}>

@@ -31,6 +31,7 @@ export default function App({
       <Head>
         <title>Job Search dashboard</title>
         <meta name="description" content="Get help finding your next job as a software developer" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />

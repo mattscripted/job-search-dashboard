@@ -18,7 +18,7 @@ import promptAnswersByTheme from "./prompts";
 import PromptAnswerForm from "./PromptAnswerForm";
 import { PromptAnswer } from "@/types/prompt-answer";
 
-export default function BehaviouralInterviewsPage() {
+export default function Topics() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedPromptAnswer, setSelectedPromptAnswer] = useState<PromptAnswer | null>(null);
 
@@ -34,8 +34,6 @@ export default function BehaviouralInterviewsPage() {
 
   return (
     <>
-      <h1>Behavioural Interviews</h1>
-
       {promptAnswersByTheme.map(({ theme, promptAnswers }, index) => (
         <Fragment key={index}>
           <h2 className="mb-0">{theme}</h2>

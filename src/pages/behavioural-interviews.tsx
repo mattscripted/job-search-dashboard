@@ -1,9 +1,23 @@
 import { GetServerSideProps } from "next";
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "@/pages/api/auth/[...nextauth]"
 import dbConnect from "@/lib/dbConnect";
 import Topic from "@/models/Topic";
 import superjson from "superjson";
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  // Redirect if not logged in
+  const session = await getServerSession(context.req, context.res, authOptions);
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/forbidden",
+        permanent: false,
+      },
+    };
+  }
+
   await dbConnect();
   const topics = await Topic.find().sort({ order: 1 }).lean();
 

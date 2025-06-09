@@ -18,11 +18,13 @@ export default function Navbar() {
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
-        <NavbarLink href="/behavioural-interviews">Behavioural Interviews</NavbarLink>
         {!session ? (
           <NavbarLink href="/api/auth/signin">Sign in</NavbarLink>
         ) : (
-          <NavbarLink href="/api/auth/signout">Sign out</NavbarLink>
+          <>
+            <NavbarLink href="/behavioural-interviews">Behavioural Interviews</NavbarLink>
+            <NavbarLink href="/api/auth/signout">Sign out</NavbarLink>
+          </>
         )}
       </NavbarCollapse>
     </BaseNavbar>

@@ -2,27 +2,27 @@ services:
   mongodb:
     container_name: mongodb
     image: mongo
-    env_file:
-      - .env.local
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=job_search
     volumes:
       - mongodb-volume:/data/db
     ports:
       - 27017:27017
 
   next-app:
+    container_name: next-app
     build:
       context: .
     env_file:
       - .env.local
     volumes:
-      - ./.flowbite-react/:/app/.flowbite-react
-      - ./public:/app/public
-      - ./src:/app/src
-      - ./mdx-components.tsx:/app/mdx-components.tsx
-      - ./next.config.ts:/app/next.config.ts
-      - ./postcss.config.mjs:/app/postcss.config.mjs
-      - ./tsconfig.json:/app/tsconfig.json
-    restart: always
+      - .:/app
+      # node modules should be installed within the container, not locally
+      # docker-compose exec next-app npm install <package>
+      - /app/node_modules # Ignore local node_modules changes
+    restart: on-failure
     ports:
       - 3000:3000
     depends_on:

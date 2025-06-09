@@ -22,7 +22,7 @@ function preventUninvitedAuth(request: NextRequest) {
 
   if (
     process.env.NODE_ENV === "production"
-    && pathname.startsWith("/auth")
+    && pathname.startsWith("/api/auth")
     && request.cookies.get(INVITE_COOKIE_NAME)?.value !== SECRET_INVITE_KEY!
   ) {
     return NextResponse.redirect(new URL("/forbidden", request.url));

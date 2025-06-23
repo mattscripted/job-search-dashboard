@@ -10,35 +10,64 @@ import {
   TableCell,
   Drawer,
   DrawerHeader,
-  DrawerItems
+  DrawerItems,
+  Spinner,
 } from "flowbite-react";
 import clsx from "clsx";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import promptAnswersByTheme from "./prompts";
+import { useLiveQuery } from "dexie-react-hooks";
+import db from "@/lib/local-db";
 import PromptAnswerForm from "./PromptAnswerForm";
-import { PromptAnswer } from "@/types/prompt-answer";
+import { Topic, Prompt } from "@/types/behavioural-interviews";
+
+type TopicWithPrompts = Topic & {
+  prompts: Prompt[];
+}
 
 export default function BehaviouralInterviewsPage() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [selectedPromptAnswer, setSelectedPromptAnswer] = useState<PromptAnswer | null>(null);
+  const [selectedPromptId, setSelectedPromptId] = useState<number | null>(null);
 
-  function handleOpenPromptAnswer(promptAnswer: PromptAnswer) {
-    setSelectedPromptAnswer(promptAnswer);
+  const topicsWithPrompts = useLiveQuery<TopicWithPrompts[]>(async () => {
+    const [topics, prompts] = await Promise.all([
+      db.topics.orderBy("order").toArray(),
+      db.prompts.orderBy("order").toArray(),
+    ]);
+
+    const promptsByTopicId = prompts.reduce((map, prompt) => {
+      if (!Object.hasOwn(map, prompt.topicId)) {
+        map[prompt.topicId] = [];
+      }
+      map[prompt.topicId].push(prompt);
+      return map;
+    }, {} as Record<number, Prompt[]>);
+
+    return topics.map(topic => ({
+      ...topic,
+      prompts: promptsByTopicId[topic.id] || [],
+    }))
+  });
+
+  function handleOpenPrompt(promptId: number) {
+    setSelectedPromptId(promptId);
     setIsDrawerOpen(true);
   }
 
   function handleCloseDrawer() {
     setIsDrawerOpen(false);
-    setSelectedPromptAnswer(null);
+    setSelectedPromptId(null);
+  }
+
+  if (!topicsWithPrompts) {
+    return <Spinner />;
   }
 
   return (
     <>
       <h1>Behavioural Interviews</h1>
-
-      {promptAnswersByTheme.map(({ theme, promptAnswers }, index) => (
-        <Fragment key={index}>
-          <h2 className="mb-0">{theme}</h2>
+      {topicsWithPrompts?.map(({ prompts, ...topic }) => (
+        <Fragment key={topic.id}>
+          <h2 className="mb-0">{topic.title}</h2>
           <Table className="mt-2" hoverable>
             <TableHead>
               <TableRow>
@@ -49,13 +78,13 @@ export default function BehaviouralInterviewsPage() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {promptAnswers.map((promptAnswer, index) => (
-                <TableRow key={index} role="button" onClick={() => handleOpenPromptAnswer(promptAnswer)}>
+              {prompts.map((prompt) => (
+                <TableRow key={prompt.id} role="button" onClick={() => handleOpenPrompt(prompt.id)}>
                   <TableCell className="align-middle">
-                    {promptAnswer.prompt}
+                    {prompt.text}
                   </TableCell>
                   <TableCell>
-                    <FaRegCircleCheck className="align-middle text-2xl" />
+                    <FaRegCircleCheck className="align-middle justify-self-end text-2xl" />
                   </TableCell>
                 </TableRow>
               ))}
@@ -63,15 +92,6 @@ export default function BehaviouralInterviewsPage() {
           </Table>
         </Fragment>
       ))}
-
-      <h2 className="mb-0">Sources</h2>
-      <p>These prompts were inspired by:</p>
-      <ul>
-        <li><a href="https://www.techinterviewhandbook.org/behavioral-interview-questions/">Tech Interview Handbook</a></li>
-        <li><a href="https://www.themuse.com/advice/behavioral-interview-questions-answers-examples">the muse</a></li>
-        <li><a href="https://www.indeed.com/career-advice/interviewing/behavioral-interview-questions">indeed</a></li>
-        <li><a href="https://business.linkedin.com/talent-solutions/resources/interviewing-talent/behavioral-interview-questions-important-soft-skills">LinkedIn</a></li>
-      </ul>
 
       <Drawer
         open={isDrawerOpen}
@@ -81,8 +101,8 @@ export default function BehaviouralInterviewsPage() {
       >
         <DrawerHeader title="Behavioural Question" />
         <DrawerItems>
-          {selectedPromptAnswer && (
-            <PromptAnswerForm promptAnswer={selectedPromptAnswer} />
+          {selectedPromptId && (
+            <PromptAnswerForm promptId={selectedPromptId} />
           )}
         </DrawerItems>
       </Drawer>

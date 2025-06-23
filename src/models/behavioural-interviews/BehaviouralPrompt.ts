@@ -5,15 +5,15 @@ export enum BehaviouralPromptType {
   Star = "star",
 }
 
-export interface BehaviouralPrompt extends Document {
+export interface IBehaviouralPrompt extends Document {
   text: string;
   type: BehaviouralPromptType;
 }
 
-export const behaviouralPromptSchema = new Schema<BehaviouralPrompt>({
+export const behaviouralPromptSchema = new Schema<IBehaviouralPrompt>({
   text: { type: String, required: true },
   type: { type: String, enum: Object.values(BehaviouralPromptType), required: true },
 });
 
-const BehaviouralPromptModel = models.BehaviouralPrompt || model<BehaviouralPrompt>("BehaviouralPrompt", behaviouralPromptSchema);
-export default BehaviouralPromptModel;
+const BehaviouralPrompt = models.BehaviouralPrompt || model<IBehaviouralPrompt>("BehaviouralPrompt", behaviouralPromptSchema);
+export default BehaviouralPrompt;

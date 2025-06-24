@@ -10,7 +10,7 @@ import {
 import {
   PromptType,
   FreeformAnswer,
-  // StarPromptAnswer,
+  StarAnswer,
 } from "@/types/behavioural-interviews";
 import usePromptWithAnswer from "./usePromptWithAnswer";
 
@@ -20,7 +20,7 @@ type PromptAnswerFormProps = {
 }
 
 type FormInputs = {
-  answer: string;
+  answer: FreeformAnswer | StarAnswer;
 };
 
 export default function PromptAnswerForm({
@@ -30,9 +30,7 @@ export default function PromptAnswerForm({
   const { prompt, promptAnswer, updatePromptAnswer } = usePromptWithAnswer(promptId);
   const { register, handleSubmit } = useForm<FormInputs>();
 
-  const onSubmit: SubmitHandler<FormInputs> = async (data) => await updatePromptAnswer({
-    answer: { text: data.answer }
-  });
+  const onSubmit: SubmitHandler<FormInputs> = async ({ answer }) => await updatePromptAnswer({ answer });
 
   if (!prompt || !promptAnswer) {
     return <Spinner />;
@@ -47,44 +45,64 @@ export default function PromptAnswerForm({
       {prompt.type === PromptType.Freeform && (
         <div className="max-w-md mb-4">
           <div className="mb-2 block">
-            <Label htmlFor="answer">Answer</Label>
+            <Label htmlFor="answer.text">Answer</Label>
           </div>
           <Textarea
-            id="answer"
+            id="answer.text"
             rows={16}
             defaultValue={(promptAnswer.answer as FreeformAnswer).text}
-            {...register("answer")}
+            {...register("answer.text")}
           />
         </div>
       )}
-      {/* {prompt.type === PromptType.Star && (
+      {prompt.type === PromptType.Star && (
         <>
           <div className="max-w-md mb-4">
             <div className="mb-2 block">
-              <Label htmlFor="situation">Situation</Label>
+              <Label htmlFor="answer.situation">Situation</Label>
             </div>
-            <Textarea id="situation" rows={4} value={(promptAnswer as StarPromptAnswer).answer.situation} readOnly />
+            <Textarea
+              id="answer.situation"
+              rows={4}
+              defaultValue={(promptAnswer.answer as StarAnswer).situation}
+              {...register("answer.situation")}
+            />
           </div>
           <div className="max-w-md mb-4">
             <div className="mb-2 block">
-              <Label htmlFor="task">Task</Label>
+              <Label htmlFor="answer.task">Task</Label>
             </div>
-            <Textarea id="task" rows={4} value={(promptAnswer as StarPromptAnswer).answer.task} readOnly />
+            <Textarea
+              id="answer.task"
+              rows={4}
+              defaultValue={(promptAnswer.answer as StarAnswer).task}
+              {...register("answer.task")}
+            />
           </div>
           <div className="max-w-md mb-4">
             <div className="mb-2 block">
-              <Label htmlFor="action">Action</Label>
+              <Label htmlFor="answer.action">Action</Label>
             </div>
-            <Textarea id="action" rows={4} value={(promptAnswer as StarPromptAnswer).answer.action} readOnly />
+            <Textarea
+              id="answer.action"
+              rows={4}
+              defaultValue={(promptAnswer.answer as StarAnswer).action}
+              {...register("answer.action")}
+            />
           </div>
           <div className="max-w-md mb-4">
             <div className="mb-2 block">
-              <Label htmlFor="result">Result</Label>
+              <Label htmlFor="answer.result">Result</Label>
             </div>
-            <Textarea id="result" rows={4} value={(promptAnswer as StarPromptAnswer).answer.result} readOnly />
+            <Textarea
+              id="answer.result"
+              rows={4}
+              defaultValue={(promptAnswer.answer as StarAnswer).result}
+              {...register("answer.result")}
+            />
           </div>
         </>
-      )} */}
+      )}
     </form>
   );
 }

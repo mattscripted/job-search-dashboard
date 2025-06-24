@@ -1,8 +1,27 @@
 import { useState, useEffect, useRef } from "react";
 import db from "@/lib/local-db";
 import { getPrompt } from "./topics";
-import { PromptAnswer, FreeformAnswer, StarAnswer } from "@/types/behavioural-interviews";
+import {
+  PromptType,
+  PromptAnswer,
+  FreeformAnswer,
+  StarAnswer,
+} from "@/types/behavioural-interviews";
 
+
+function getDefaultAnswer(promptType: PromptType) {
+  return {
+    [PromptType.Freeform]: {
+      text: "",
+    },
+    [PromptType.Star]: {
+      situation: "",
+      task: "",
+      action: "",
+      result: "",
+    }
+  }[promptType];
+}
 
 export default function usePromptWithAnswer(promptId: string) {
   const prompt = getPrompt(promptId);
@@ -17,18 +36,21 @@ export default function usePromptWithAnswer(promptId: string) {
     hasStartedFetchingPromptAnswer.current = true;
 
     async function getOrCreatePromptAnswer() {
+      if (!prompt) return;
+
       let promptAnswer = await db.promptAnswers.get({ promptId });
       if (promptAnswer) return setPromptAnswer(promptAnswer);
 
       // Create the prompt answer if it does not exist
-      // TODO: Support STAR
-      const promptAnswerId = await db.promptAnswers.add({ promptId, answer: { text: "" } });
+      const answer = getDefaultAnswer(prompt.type);
+      const promptAnswerId = await db.promptAnswers.add({ promptId, answer });
       promptAnswer = await db.promptAnswers.get(promptAnswerId);
       setPromptAnswer(promptAnswer);
     }
 
     getOrCreatePromptAnswer();
-  }, [promptId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   async function updatePromptAnswer({
     answer

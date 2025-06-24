@@ -23,6 +23,31 @@
         "id": "career-history-resume-gaps",
         "text": "Explain any resume gaps",
         "type": "freeform"
+      },
+      {
+        "id": "career-history-debugging",
+        "text": "Describe a time you debugged a difficult problem",
+        "type": "star"
+      },
+      {
+        "id": "career-history-coworker-conflict",
+        "text": "Describe a time you had a conflict with a coworker",
+        "type": "star"
+      },
+      {
+        "id": "career-history-lead-project",
+        "text": "Describe a time you led a project",
+        "type": "star"
+      },
+      {
+        "id": "career-history-improve-system-process",
+        "text": "Describe a time you improved a system or process",
+        "type": "star"
+      },
+      {
+        "id": "career-history-quick-learning",
+        "text": "Describe a time you learned quickly to get unblocked",
+        "type": "star"
       }
     ]
   },

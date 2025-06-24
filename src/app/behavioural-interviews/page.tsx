@@ -8,37 +8,33 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Drawer,
-  DrawerHeader,
-  DrawerItems
 } from "flowbite-react";
-import clsx from "clsx";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import promptAnswersByTheme from "./prompts";
-import PromptAnswerForm from "./PromptAnswerForm";
-import { PromptAnswer } from "@/types/prompt-answer";
+
+import PromptAnswerDrawer from "./PromptAnswerDrawer";
+import topics from "./topics";
 
 export default function BehaviouralInterviewsPage() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [selectedPromptAnswer, setSelectedPromptAnswer] = useState<PromptAnswer | null>(null);
+  const [isPromptAnswerOpen, setIsPromptAnswerOpen] = useState(false);
+  const [selectedPromptId, setSelectedPromptId] = useState<string | null>(null);
 
-  function handleOpenPromptAnswer(promptAnswer: PromptAnswer) {
-    setSelectedPromptAnswer(promptAnswer);
-    setIsDrawerOpen(true);
+  function handleOpenPromptAnswer(promptId: string) {
+    setSelectedPromptId(promptId);
+    setIsPromptAnswerOpen(true);
   }
 
-  function handleCloseDrawer() {
-    setIsDrawerOpen(false);
-    setSelectedPromptAnswer(null);
+  function handleClosePromptAnswer() {
+    setIsPromptAnswerOpen(false);
+    setSelectedPromptId(null);
   }
 
   return (
     <>
       <h1>Behavioural Interviews</h1>
 
-      {promptAnswersByTheme.map(({ theme, promptAnswers }, index) => (
-        <Fragment key={index}>
-          <h2 className="mb-0">{theme}</h2>
+      {topics.map((topic) => (
+        <Fragment key={topic.id}>
+          <h2 className="mb-0">{topic.title}</h2>
           <Table className="mt-2" hoverable>
             <TableHead>
               <TableRow>
@@ -49,13 +45,13 @@ export default function BehaviouralInterviewsPage() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {promptAnswers.map((promptAnswer, index) => (
-                <TableRow key={index} role="button" onClick={() => handleOpenPromptAnswer(promptAnswer)}>
+              {topic.prompts.map((prompt) => (
+                <TableRow key={prompt.id} role="button" onClick={() => handleOpenPromptAnswer(prompt.id)}>
                   <TableCell className="align-middle">
-                    {promptAnswer.prompt}
+                    {prompt.text}
                   </TableCell>
                   <TableCell>
-                    <FaRegCircleCheck className="align-middle text-2xl" />
+                    <FaRegCircleCheck className="align-middle justify-self-end text-2xl" />
                   </TableCell>
                 </TableRow>
               ))}
@@ -64,28 +60,11 @@ export default function BehaviouralInterviewsPage() {
         </Fragment>
       ))}
 
-      <h2 className="mb-0">Sources</h2>
-      <p>These prompts were inspired by:</p>
-      <ul>
-        <li><a href="https://www.techinterviewhandbook.org/behavioral-interview-questions/">Tech Interview Handbook</a></li>
-        <li><a href="https://www.themuse.com/advice/behavioral-interview-questions-answers-examples">the muse</a></li>
-        <li><a href="https://www.indeed.com/career-advice/interviewing/behavioral-interview-questions">indeed</a></li>
-        <li><a href="https://business.linkedin.com/talent-solutions/resources/interviewing-talent/behavioral-interview-questions-important-soft-skills">LinkedIn</a></li>
-      </ul>
-
-      <Drawer
-        open={isDrawerOpen}
-        onClose={handleCloseDrawer}
-        position="right"
-        className={clsx("md:w-[400px]", isDrawerOpen && "shadow-[-8px_0_16px_-4px_rgba(0,0,0,0.3)]")}
-      >
-        <DrawerHeader title="Behavioural Question" />
-        <DrawerItems>
-          {selectedPromptAnswer && (
-            <PromptAnswerForm promptAnswer={selectedPromptAnswer} />
-          )}
-        </DrawerItems>
-      </Drawer>
+      <PromptAnswerDrawer
+        isOpen={isPromptAnswerOpen}
+        onClose={handleClosePromptAnswer}
+        promptId={selectedPromptId}
+      />
     </>
   );
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "about-me",
+    "title": "About Me",
+    "prompts": [
+      {
+        "id": "about-me-introduction",
+        "text": "Introduction",
+        "type": "freeform"
+      },
+      {
+        "id": "about-me-next-role",
+        "text": "What are you looking for in your next role?",
+        "type": "freeform"
+      }
+    ]
+  },
+  {
+    "id": "career-history",
+    "title": "Career History",
+    "prompts": [
+      {
+        "id": "career-history-resume-gaps",
+        "text": "Explain any resume gaps",
+        "type": "freeform"
+      }
+    ]
+  },
+  {
+    "id": "work-preferences",
+    "title": "Work Preferences",
+    "prompts": [
+      {
+        "id": "work-preferences-remote-hybrid-office",
+        "text": "Are you open to remote, hybrid, or fully in-office work?",
+        "type": "freeform"
+      }
+    ]
+  },
+  {
+    "id": "compensation",
+    "title": "Compensation",
+    "prompts": [
+      {
+        "id": "compensation-salary-range",
+        "text": "Salary range",
+        "type": "freeform"
+      },
+      {
+        "id": "compensation-vacation",
+        "text": "Vacation",
+        "type": "freeform"
+      }
+    ]
+  }
+]

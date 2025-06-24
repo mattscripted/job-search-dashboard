@@ -2,7 +2,7 @@ import { useLiveQuery } from "dexie-react-hooks";
 import db from "@/lib/local-db";
 import { Prompt, TopicWithPrompts } from "@/types/behavioural-interviews";
 
-export default function useTopicsWithPrompts() {
+export default function useTopicsWithPrompts(): TopicWithPrompts[] | undefined {
   return useLiveQuery<TopicWithPrompts[]>(async () => {
     const [topics, prompts] = await Promise.all([
       db.topics.orderBy("order").toArray(),

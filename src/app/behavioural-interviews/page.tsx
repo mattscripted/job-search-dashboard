@@ -22,7 +22,6 @@ import useTopicsWithPrompts from "./useTopicsWithPrompts";
 export default function BehaviouralInterviewsPage() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedPromptId, setSelectedPromptId] = useState<number | null>(null);
-
   const topicsWithPrompts = useTopicsWithPrompts();
 
   function handleOpenPrompt(promptId: number) {

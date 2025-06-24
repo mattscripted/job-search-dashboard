@@ -17,6 +17,10 @@ export type Prompt = {
   order: number; // order within a topic
 }
 
+export type TopicWithPrompts = Topic & {
+  prompts: Prompt[];
+}
+
 type BasePromptAnswer = {
   id: number;
   promptId: number; // references Prompt

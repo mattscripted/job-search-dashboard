@@ -15,38 +15,15 @@ import {
 } from "flowbite-react";
 import clsx from "clsx";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import { useLiveQuery } from "dexie-react-hooks";
-import db from "@/lib/local-db";
-import PromptAnswerForm from "./PromptAnswerForm";
-import { Topic, Prompt } from "@/types/behavioural-interviews";
 
-type TopicWithPrompts = Topic & {
-  prompts: Prompt[];
-}
+import PromptAnswerForm from "./PromptAnswerForm";
+import useTopicsWithPrompts from "./useTopicsWithPrompts";
 
 export default function BehaviouralInterviewsPage() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedPromptId, setSelectedPromptId] = useState<number | null>(null);
 
-  const topicsWithPrompts = useLiveQuery<TopicWithPrompts[]>(async () => {
-    const [topics, prompts] = await Promise.all([
-      db.topics.orderBy("order").toArray(),
-      db.prompts.orderBy("order").toArray(),
-    ]);
-
-    const promptsByTopicId = prompts.reduce((map, prompt) => {
-      if (!Object.hasOwn(map, prompt.topicId)) {
-        map[prompt.topicId] = [];
-      }
-      map[prompt.topicId].push(prompt);
-      return map;
-    }, {} as Record<number, Prompt[]>);
-
-    return topics.map(topic => ({
-      ...topic,
-      prompts: promptsByTopicId[topic.id] || [],
-    }))
-  });
+  const topicsWithPrompts = useTopicsWithPrompts();
 
   function handleOpenPrompt(promptId: number) {
     setSelectedPromptId(promptId);

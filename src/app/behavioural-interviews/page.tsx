@@ -8,33 +8,30 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Drawer,
-  DrawerHeader,
-  DrawerItems,
 } from "flowbite-react";
-import clsx from "clsx";
 import { FaRegCircleCheck } from "react-icons/fa6";
 
-import PromptAnswerForm from "./PromptAnswerForm";
+import PromptAnswerDrawer from "./PromptAnswerDrawer";
 import topics from "./topics";
 
 export default function BehaviouralInterviewsPage() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isPromptAnswerOpen, setIsPromptAnswerOpen] = useState(false);
   const [selectedPromptId, setSelectedPromptId] = useState<string | null>(null);
 
-  function handleOpenPrompt(promptId: string) {
+  function handleOpenPromptAnswer(promptId: string) {
     setSelectedPromptId(promptId);
-    setIsDrawerOpen(true);
+    setIsPromptAnswerOpen(true);
   }
 
-  function handleCloseDrawer() {
-    setIsDrawerOpen(false);
+  function handleClosePromptAnswer() {
+    setIsPromptAnswerOpen(false);
     setSelectedPromptId(null);
   }
 
   return (
     <>
       <h1>Behavioural Interviews</h1>
+
       {topics.map((topic) => (
         <Fragment key={topic.id}>
           <h2 className="mb-0">{topic.title}</h2>
@@ -49,7 +46,7 @@ export default function BehaviouralInterviewsPage() {
             </TableHead>
             <TableBody>
               {topic.prompts.map((prompt) => (
-                <TableRow key={prompt.id} role="button" onClick={() => handleOpenPrompt(prompt.id)}>
+                <TableRow key={prompt.id} role="button" onClick={() => handleOpenPromptAnswer(prompt.id)}>
                   <TableCell className="align-middle">
                     {prompt.text}
                   </TableCell>
@@ -63,19 +60,11 @@ export default function BehaviouralInterviewsPage() {
         </Fragment>
       ))}
 
-      <Drawer
-        open={isDrawerOpen}
-        onClose={handleCloseDrawer}
-        position="right"
-        className={clsx("md:w-[400px]", isDrawerOpen && "shadow-[-8px_0_16px_-4px_rgba(0,0,0,0.3)]")}
-      >
-        <DrawerHeader title="Behavioural Question" />
-        <DrawerItems>
-          {selectedPromptId && (
-            <PromptAnswerForm promptId={selectedPromptId} />
-          )}
-        </DrawerItems>
-      </Drawer>
+      <PromptAnswerDrawer
+        isOpen={isPromptAnswerOpen}
+        onClose={handleClosePromptAnswer}
+        promptId={selectedPromptId}
+      />
     </>
   );
 }

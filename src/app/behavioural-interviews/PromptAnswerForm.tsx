@@ -1,5 +1,6 @@
 "use client";
 
+import { Ref } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import {
   Button,
@@ -16,6 +17,7 @@ import usePromptWithAnswer from "./usePromptWithAnswer";
 
 type PromptAnswerFormProps = {
   promptId: string;
+  ref: Ref<HTMLFormElement> | undefined;
 }
 
 type FormInputs = {
@@ -23,7 +25,8 @@ type FormInputs = {
 };
 
 export default function PromptAnswerForm({
-  promptId
+  promptId,
+  ref,
 }: PromptAnswerFormProps) {
   const { prompt, promptAnswer, updatePromptAnswer } = usePromptWithAnswer(promptId);
   const { register, handleSubmit } = useForm<FormInputs>();
@@ -36,8 +39,9 @@ export default function PromptAnswerForm({
     return <Spinner />;
   }
 
+  // The form is submitted by PromptAnswerDrawer on close
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} ref={ref}>
       <div className="max-w-md mb-4 font-bold">
         {prompt.text}
       </div>
@@ -82,7 +86,6 @@ export default function PromptAnswerForm({
           </div>
         </>
       )} */}
-      <Button type="submit">Save changes</Button>
     </form>
   );
 }

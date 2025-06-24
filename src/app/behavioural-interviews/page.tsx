@@ -11,20 +11,18 @@ import {
   Drawer,
   DrawerHeader,
   DrawerItems,
-  Spinner,
 } from "flowbite-react";
 import clsx from "clsx";
 import { FaRegCircleCheck } from "react-icons/fa6";
 
 import PromptAnswerForm from "./PromptAnswerForm";
-import useTopicsWithPrompts from "./useTopicsWithPrompts";
+import topics from "./topics";
 
 export default function BehaviouralInterviewsPage() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [selectedPromptId, setSelectedPromptId] = useState<number | null>(null);
-  const topicsWithPrompts = useTopicsWithPrompts();
+  const [selectedPromptId, setSelectedPromptId] = useState<string | null>(null);
 
-  function handleOpenPrompt(promptId: number) {
+  function handleOpenPrompt(promptId: string) {
     setSelectedPromptId(promptId);
     setIsDrawerOpen(true);
   }
@@ -34,14 +32,10 @@ export default function BehaviouralInterviewsPage() {
     setSelectedPromptId(null);
   }
 
-  if (!topicsWithPrompts) {
-    return <Spinner />;
-  }
-
   return (
     <>
       <h1>Behavioural Interviews</h1>
-      {topicsWithPrompts?.map(({ prompts, ...topic }) => (
+      {topics.map((topic) => (
         <Fragment key={topic.id}>
           <h2 className="mb-0">{topic.title}</h2>
           <Table className="mt-2" hoverable>
@@ -54,7 +48,7 @@ export default function BehaviouralInterviewsPage() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {prompts.map((prompt) => (
+              {topic.prompts.map((prompt) => (
                 <TableRow key={prompt.id} role="button" onClick={() => handleOpenPrompt(prompt.id)}>
                   <TableCell className="align-middle">
                     {prompt.text}

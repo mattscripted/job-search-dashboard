@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { useLiveQuery } from "dexie-react-hooks";
 import db from "@/lib/local-db";
+import { getPrompt } from "./topics";
 import { PromptAnswer, FreeformAnswer, StarAnswer } from "@/types/behavioural-interviews";
 
-export default function usePromptWithAnswer(promptId: number) {
-  const prompt = useLiveQuery(() => db.prompts.get(promptId));
+
+export default function usePromptWithAnswer(promptId: string) {
+  const prompt = getPrompt(promptId);
 
   const hasStartedFetchingPromptAnswer = useRef(false);
   const [promptAnswer, setPromptAnswer] = useState<PromptAnswer | undefined>(undefined);
@@ -20,6 +21,7 @@ export default function usePromptWithAnswer(promptId: number) {
       if (promptAnswer) return setPromptAnswer(promptAnswer);
 
       // Create the prompt answer if it does not exist
+      // TODO: Support STAR
       const promptAnswerId = await db.promptAnswers.add({ promptId, answer: { text: "" } });
       promptAnswer = await db.promptAnswers.get(promptAnswerId);
       setPromptAnswer(promptAnswer);

@@ -15,7 +15,7 @@ import {
 import usePromptWithAnswer from "./usePromptWithAnswer";
 
 type PromptAnswerFormProps = {
-  promptId: number;
+  promptId: string;
 }
 
 type FormInputs = {

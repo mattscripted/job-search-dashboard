@@ -1,7 +1,7 @@
 export type Topic = {
-  id: number;
+  id: string;
   title: string;
-  order: number;
+  prompts: Prompt[];
 };
 
 export enum PromptType {
@@ -10,15 +10,9 @@ export enum PromptType {
 };
 
 export type Prompt = {
-  id: number;
+  id: string;
   text: string;
   type: PromptType;
-  topicId: number; // references Topic
-  order: number; // order within a topic
-};
-
-export type TopicWithPrompts = Topic & {
-  prompts: Prompt[];
 };
 
 export type FreeformAnswer = {
@@ -34,6 +28,6 @@ export type StarAnswer = {
 
 export type PromptAnswer = {
   id: number;
-  promptId: number; // references Prompt
+  promptId: string; // references Prompt (see topics.json)
   answer: FreeformAnswer | StarAnswer;
 };

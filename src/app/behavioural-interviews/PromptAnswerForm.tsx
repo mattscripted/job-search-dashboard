@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { useLiveQuery } from "dexie-react-hooks";
 import {
   Button,
@@ -20,12 +21,18 @@ type PromptAnswerFormProps = {
   promptId: number;
 }
 
+type FormInputs = {
+  answer: string;
+};
+
 export default function PromptAnswerForm({
   promptId
 }: PromptAnswerFormProps) {
   const prompt = useLiveQuery(() => db.prompts.get(promptId));
   const hasStartedFetchingPromptAnswer = useRef(false);
   const [promptAnswer, setPromptAnswer] = useState<PromptAnswer | undefined>(undefined);
+
+  const { register, handleSubmit } = useForm<FormInputs>();
 
   useEffect(() => {
     // Prevent duplicate calls to fetch prompt answer in development
@@ -46,10 +53,8 @@ export default function PromptAnswerForm({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    // TODO: Save data from form
-    await db.promptAnswers.where({ promptId }).modify({ promptId, answer: { text: "test answer!" } });
+  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
+    await db.promptAnswers.where({ promptId }).modify({ promptId, answer: { text: data.answer } });
   }
 
   if (!prompt || !promptAnswer) {
@@ -57,7 +62,7 @@ export default function PromptAnswerForm({
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="max-w-md mb-4 font-bold">
         {prompt.text}
       </div>
@@ -66,10 +71,15 @@ export default function PromptAnswerForm({
           <div className="mb-2 block">
             <Label htmlFor="answer">Answer</Label>
           </div>
-          <Textarea id="answer" rows={4} value={(promptAnswer as FreeformPromptAnswer).answer.text} readOnly />
+          <Textarea
+            id="answer"
+            rows={16}
+            defaultValue={(promptAnswer as FreeformPromptAnswer).answer.text}
+            {...register("answer")}
+          />
         </div>
       )}
-      {prompt.type === PromptType.Star && (
+      {/* {prompt.type === PromptType.Star && (
         <>
           <div className="max-w-md mb-4">
             <div className="mb-2 block">
@@ -96,7 +106,7 @@ export default function PromptAnswerForm({
             <Textarea id="result" rows={4} value={(promptAnswer as StarPromptAnswer).answer.result} readOnly />
           </div>
         </>
-      )}
+      )} */}
       <Button type="submit">Save changes</Button>
     </form>
   );

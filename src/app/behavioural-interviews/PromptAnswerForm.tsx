@@ -1,21 +1,18 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useLiveQuery } from "dexie-react-hooks";
 import {
   Button,
   Label,
   Textarea,
   Spinner,
 } from "flowbite-react";
-import db from "@/lib/local-db";
 import {
   PromptType,
-  PromptAnswer,
-  FreeformPromptAnswer,
-  StarPromptAnswer,
+  FreeformAnswer,
+  // StarPromptAnswer,
 } from "@/types/behavioural-interviews";
+import usePromptWithAnswer from "./usePromptWithAnswer";
 
 type PromptAnswerFormProps = {
   promptId: number;
@@ -28,34 +25,12 @@ type FormInputs = {
 export default function PromptAnswerForm({
   promptId
 }: PromptAnswerFormProps) {
-  const prompt = useLiveQuery(() => db.prompts.get(promptId));
-  const hasStartedFetchingPromptAnswer = useRef(false);
-  const [promptAnswer, setPromptAnswer] = useState<PromptAnswer | undefined>(undefined);
-
+  const { prompt, promptAnswer, updatePromptAnswer } = usePromptWithAnswer(promptId);
   const { register, handleSubmit } = useForm<FormInputs>();
 
-  useEffect(() => {
-    // Prevent duplicate calls to fetch prompt answer in development
-    if (hasStartedFetchingPromptAnswer.current) return;
-    hasStartedFetchingPromptAnswer.current = true;
-
-    async function getOrCreatePromptAnswer() {
-      let promptAnswer = await db.promptAnswers.get({ promptId });
-      if (promptAnswer) return setPromptAnswer(promptAnswer);
-
-      // Create the prompt answer if it does not exist
-      const promptAnswerId = await db.promptAnswers.add({ promptId, answer: { text: "" } });
-      promptAnswer = await db.promptAnswers.get(promptAnswerId);
-      setPromptAnswer(promptAnswer);
-    }
-
-    getOrCreatePromptAnswer();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
-    await db.promptAnswers.where({ promptId }).modify({ promptId, answer: { text: data.answer } });
-  }
+  const onSubmit: SubmitHandler<FormInputs> = async (data) => await updatePromptAnswer({
+    answer: { text: data.answer }
+  });
 
   if (!prompt || !promptAnswer) {
     return <Spinner />;
@@ -74,7 +49,7 @@ export default function PromptAnswerForm({
           <Textarea
             id="answer"
             rows={16}
-            defaultValue={(promptAnswer as FreeformPromptAnswer).answer.text}
+            defaultValue={(promptAnswer.answer as FreeformAnswer).text}
             {...register("answer")}
           />
         </div>

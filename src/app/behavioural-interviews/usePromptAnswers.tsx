@@ -1,4 +1,12 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+  Dispatch,
+  SetStateAction,
+} from 'react';
 import { Spinner } from "flowbite-react";
 import db from "@/lib/local-db";
 import {
@@ -9,9 +17,14 @@ import {
 } from "@/types/behavioural-interviews";
 import { getPrompt } from "./topics";
 
-const PromptAnswersContext = createContext(null);
+type PromptAnswersContextType = [PromptAnswer[], Dispatch<SetStateAction<PromptAnswer[]>>];
+const PromptAnswersContext = createContext<PromptAnswersContextType | null>(null);
 
-export function PromptAnswersProvider({ children }) {
+type PromptAnswersProviderProps = {
+  children: ReactNode;
+}
+
+export function PromptAnswersProvider({ children }: PromptAnswersProviderProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [promptAnswers, setPromptAnswers] = useState<PromptAnswer[]>([]);
 
@@ -99,7 +112,7 @@ export default function usePromptAnswers() {
     return promptAnswer ? promptAnswer.answered : false;
   }
 
-  async function updatePromptAnswer(promptId: string, changes) {
+  async function updatePromptAnswer(promptId: string, changes: Partial<PromptAnswer>) {
     // Update item in database
     await db.promptAnswers
       .where({ promptId })

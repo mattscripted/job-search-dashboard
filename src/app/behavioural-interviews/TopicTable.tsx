@@ -21,7 +21,7 @@ type TopicTableProps = {
 export default function TopicTable({ topic, onClickPrompt }: TopicTableProps) {
   const { isPromptAnswered, togglePromptAnswered } = usePromptAnswers();
 
-  async function handleClickCheckmark(event, promptId: string) {
+  async function handleClickCheckmark(event: React.MouseEvent<HTMLElement>, promptId: string) {
     event.stopPropagation();
     await togglePromptAnswered(promptId);
   }
@@ -51,6 +51,7 @@ export default function TopicTable({ topic, onClickPrompt }: TopicTableProps) {
               </TableCell>
               <TableCell>
                 <FaRegCircleCheck
+                  tabIndex={0}
                   role="button"
                   onClick={(event) => handleClickCheckmark(event, prompt.id)}
                   className={clsx("align-middle justify-self-end text-2xl cursor-pointer", isPromptAnswered(prompt.id) && "text-green-500")}

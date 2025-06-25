@@ -6,7 +6,7 @@ const db = new Dexie("JobSearchDatabase") as Dexie & {
 };
 
 db.version(1).stores({
-  promptAnswers: "++id, promptId",
+  promptAnswers: "++id, promptId, answered",
 });
 
 export default db;

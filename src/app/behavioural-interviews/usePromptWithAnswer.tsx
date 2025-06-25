@@ -8,7 +8,6 @@ import {
   StarAnswer,
 } from "@/types/behavioural-interviews";
 
-
 function getDefaultAnswer(promptType: PromptType) {
   return {
     [PromptType.Freeform]: {
@@ -43,7 +42,7 @@ export default function usePromptWithAnswer(promptId: string) {
 
       // Create the prompt answer if it does not exist
       const answer = getDefaultAnswer(prompt.type);
-      const promptAnswerId = await db.promptAnswers.add({ promptId, answer });
+      const promptAnswerId = await db.promptAnswers.add({ promptId, answer, answered: false });
       promptAnswer = await db.promptAnswers.get(promptAnswerId);
       setPromptAnswer(promptAnswer);
     }

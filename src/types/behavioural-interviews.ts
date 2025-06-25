@@ -30,4 +30,5 @@ export type PromptAnswer = {
   id: number;
   promptId: string; // references Prompt (see topics.json)
   answer: FreeformAnswer | StarAnswer;
+  answered: boolean;
 };

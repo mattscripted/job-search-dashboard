@@ -21,7 +21,7 @@ type TopicTableProps = {
 export default function TopicTable({ topic, onClickPrompt }: TopicTableProps) {
   const { isPromptAnswered, togglePromptAnswered } = usePromptAnswers();
 
-  async function handleClickCheckmark(event: React.MouseEvent<HTMLElement>, promptId: string) {
+  async function handleClickCheckmark(event: React.MouseEvent<SVGElement>, promptId: string) {
     event.stopPropagation();
     await togglePromptAnswered(promptId);
   }

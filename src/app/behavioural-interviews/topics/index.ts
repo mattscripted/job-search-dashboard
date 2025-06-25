@@ -14,6 +14,9 @@ const promptsById = topics.reduce<Record<string, Prompt>>((acc, topic) => {
   return acc;
 }, {});
 
-export function getPrompt(promptId: string): Prompt | undefined {
-  return promptsById[promptId];
+export function getPrompt(promptId: string): Prompt {
+  const prompt = promptsById[promptId]
+  if (!prompt) throw new Error(`Invalid promptId: ${promptId}`);
+
+  return prompt;
 }

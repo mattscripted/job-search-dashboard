@@ -1,7 +1,13 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { Spinner } from "flowbite-react";
 import db from "@/lib/local-db";
-import { PromptAnswer } from "@/types/behavioural-interviews";
+import {
+  PromptType,
+  PromptAnswer,
+  FreeformAnswer,
+  StarAnswer,
+} from "@/types/behavioural-interviews";
+import { getPrompt } from "./topics";
 
 const PromptAnswersContext = createContext(null);
 
@@ -39,12 +45,91 @@ export default function usePromptAnswers() {
 
   const [promptAnswers, setPromptAnswers] = context;
 
-  function isPromptAnswered(promptId: string) {
-    const promptAnswer = promptAnswers.find(promptAnswer => promptAnswer.promptId === promptId)
+  function getDefaultPromptAnswerProps(promptId: string): Omit<PromptAnswer, "id"> {
+    const prompt = getPrompt(promptId);
+
+    const answer: FreeformAnswer | StarAnswer = {
+      [PromptType.Freeform]: {
+        text: "",
+      },
+      [PromptType.Star]: {
+        situation: "",
+        task: "",
+        action: "",
+        result: "",
+      }
+    }[prompt.type];
+
+    return {
+      promptId,
+      answer,
+      answered: false,
+    };
+  }
+
+  async function createPromptAnswer(promptId: string): Promise<PromptAnswer> {
+    if (getPromptAnswer(promptId)) throw new Error(`Unable to create duplicate prompt answer for promptId: ${promptId}`);
+
+    // Create item in database
+    const promptAnswerProps = getDefaultPromptAnswerProps(promptId);
+    const promptAnswerId = await db.promptAnswers.add(promptAnswerProps);
+    const promptAnswer = await db.promptAnswers.get(promptAnswerId);
+
+    if (!promptAnswer) throw new Error("Prompt answer was not found after creation");
+
+    // Sync local copy
+    setPromptAnswers(promptAnswers => [...promptAnswers, promptAnswer]);
+
+    return promptAnswer;
+  }
+
+  function getPromptAnswer(promptId: string): PromptAnswer | undefined {
+    return promptAnswers.find(promptAnswer => promptAnswer.promptId === promptId);
+  }
+
+  async function getOrCreatePromptAnswer(promptId: string): Promise<PromptAnswer> {
+    const promptAnswer = getPromptAnswer(promptId);
+    if (promptAnswer) return promptAnswer;
+
+    return createPromptAnswer(promptId);
+  }
+
+  function isPromptAnswered(promptId: string): boolean {
+    const promptAnswer = getPromptAnswer(promptId);
     return promptAnswer ? promptAnswer.answered : false;
   }
 
+  async function updatePromptAnswer(promptId: string, changes) {
+    // Update item in database
+    await db.promptAnswers
+      .where({ promptId })
+      .modify(changes);
+
+    // Sync local copy
+    setPromptAnswers((promptAnswers: PromptAnswer[]) => {
+      return promptAnswers.map((prevPromptAnswer: PromptAnswer) => {
+        if (prevPromptAnswer.promptId === promptId) {
+          return { ...prevPromptAnswer, ...changes };
+        } else {
+          return prevPromptAnswer;
+        }
+      })
+    });
+  }
+
+  async function togglePromptAnswered(promptId: string) {
+    const promptAnswer = await getOrCreatePromptAnswer(promptId);
+    const changes = { answered: !promptAnswer.answered };
+
+    await updatePromptAnswer(promptId, changes);
+  }
+
   return {
+    createPromptAnswer,
+    getPromptAnswer,
+    getOrCreatePromptAnswer,
     isPromptAnswered,
+    updatePromptAnswer,
+    togglePromptAnswered,
   };
 }

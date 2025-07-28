@@ -1,5 +1,7 @@
 # job-search-dashboard
 
+> ⚠️ This project is currently inactive. I may return to it in the future.
+
 ## Development
 
 To run the app locally:
